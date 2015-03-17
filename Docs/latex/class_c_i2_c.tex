@@ -3,13 +3,18 @@
 }
 
 
+Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C.  
+
+
+
+
 {\ttfamily \#include $<$C\+I2\+C.\+h$>$}
 
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes \hyperlink{class_c_i2_c}{C\+I2\+C}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -42,11 +47,11 @@ int \hyperlink{class_c_i2_c_ae2d4648eadc2acae86a49cecbf39ce56}{dev}
 bool \hyperlink{class_c_i2_c_a892d111f995589334497f2b573ab436d}{is\+Set\+Dev}
 \begin{DoxyCompactList}\small\item\em Bool qui permet de savoir si le dev est défini. \end{DoxyCompactList}\item 
 bool \hyperlink{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{is\+Set\+Slave}
-\begin{DoxyCompactList}\small\item\em Bool quui permet de savoir sur l'esclave est défini. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Bool qui permet de savoir sur l'esclave est défini. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
-Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C 
+Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C. 
 
 Définition à la ligne 25 du fichier C\+I2\+C.\+h.
 
@@ -97,9 +102,13 @@ Définition à la ligne 12 du fichier C\+I2\+C.\+cpp.
 
 Methode is\+Set\+Interface. 
 
-Cette méthode permet de verifier si le dev et l'esclave sont bien défini 
+Cette méthode permet de verifier si le dev et l'esclave sont bien défini
+
+
 \begin{DoxyExceptions}{Exceptions}
-{\em test} & \\
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si le dev n'est pas défini, leve une exception de type \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2}{Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+D\+E\+V\+\_\+\+D\+E\+F} \\
+\hline
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si l'esclave n'est pas défini, leve une exception de type \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874}{Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+S\+L\+A\+V\+E\+\_\+\+D\+E\+F} \\
 \hline
 \end{DoxyExceptions}
 
@@ -271,7 +280,7 @@ Contient les informations du bus I2\+C.
 
 
 
-Définition à la ligne 52 du fichier C\+I2\+C.\+h.
+Définition à la ligne 90 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a892d111f995589334497f2b573ab436d}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Dev@{is\+Set\+Dev}}
 \index{is\+Set\+Dev@{is\+Set\+Dev}!C\+I2\+C@{C\+I2\+C}}
@@ -282,18 +291,18 @@ Bool qui permet de savoir si le dev est défini.
 
 
 
-Définition à la ligne 54 du fichier C\+I2\+C.\+h.
+Définition à la ligne 92 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Slave@{is\+Set\+Slave}}
 \index{is\+Set\+Slave@{is\+Set\+Slave}!C\+I2\+C@{C\+I2\+C}}
 \subsubsection[{is\+Set\+Slave}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+I2\+C\+::is\+Set\+Slave\hspace{0.3cm}{\ttfamily [private]}}}\label{class_c_i2_c_a19200c12efe17b560256641cce4f5909}
 
 
-Bool quui permet de savoir sur l'esclave est défini. 
+Bool qui permet de savoir sur l'esclave est défini. 
 
 
 
-Définition à la ligne 56 du fichier C\+I2\+C.\+h.
+Définition à la ligne 94 du fichier C\+I2\+C.\+h.
 
 
 

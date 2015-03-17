@@ -3,12 +3,16 @@
 }
 
 
+Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes \hyperlink{class_c_i2_c}{C\+I2\+C}.  
+
+
+
+
 {\ttfamily \#include $<$C\+I2\+C.\+h$>$}
 
 
 
-Graphe d'héritage de C\+I2\+C\+:\+:Erreur\+:
-\nopagebreak
+Graphe d'héritage de C\+I2\+C\+:\+:Erreur\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,8 +21,7 @@ Graphe d'héritage de C\+I2\+C\+:\+:Erreur\+:
 \end{figure}
 
 
-Graphe de collaboration de C\+I2\+C\+:\+:Erreur\+:
-\nopagebreak
+Graphe de collaboration de C\+I2\+C\+:\+:Erreur\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -42,26 +45,26 @@ enum \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}{T\+Y\
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_c_i2_c_1_1_erreur_a2db008616ca661df8df52d35e3fa26f9}{Erreur} (\hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} erreur, string const \&phrase) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}. \end{DoxyCompactList}\item 
 virtual \hyperlink{class_c_i2_c_1_1_erreur_a8ed19157b6dd1cfe68dba1d4d6fab2d2}{$\sim$\+Erreur} () noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}. \end{DoxyCompactList}\item 
 virtual const char $\ast$ \hyperlink{class_c_i2_c_1_1_erreur_af38041f60a330ca1603d462c01b118f3}{what} () const noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Methode what. \end{DoxyCompactList}\item 
 \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} \hyperlink{class_c_i2_c_1_1_erreur_a1f9da2c2241b49e5be93bf99438190a1}{get\+Type\+Erreur} () noexcept
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Methode get\+Type\+Erreur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
 string \hyperlink{class_c_i2_c_1_1_erreur_ac61872a33babfea899fa3f3feaedaf32}{m\+\_\+phrase}
-\item 
+\begin{DoxyCompactList}\small\item\em Contient une phrase qui correspond à l'erreur. \end{DoxyCompactList}\item 
 \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} \hyperlink{class_c_i2_c_1_1_erreur_a0228754dfbaabca99985b8701fcd92b0}{m\+\_\+erreur}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Contient le type de l'erreur. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
+Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes \hyperlink{class_c_i2_c}{C\+I2\+C}. 
 
-
-Définition à la ligne 28 du fichier C\+I2\+C.\+h.
+Définition à la ligne 31 du fichier C\+I2\+C.\+h.
 
 
 
@@ -69,26 +72,26 @@ Définition à la ligne 28 du fichier C\+I2\+C.\+h.
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}{\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R@{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R}}
 \index{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R@{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}
 \subsubsection[{T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\+I2\+C\+::\+Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} \+: int\hspace{0.3cm}{\ttfamily [strong]}}}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5}
-\begin{Desc}
+Cette énumération décrit les erreurs possible de la classes \hyperlink{class_c_i2_c}{C\+I2\+C} \begin{Desc}
 \item[Valeurs énumérées]\par
 \begin{description}
 \index{W\+R\+I\+T\+E@{W\+R\+I\+T\+E}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!W\+R\+I\+T\+E@{W\+R\+I\+T\+E}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad4b9e47f65b6e79b010582f15785867e}{W\+R\+I\+T\+E}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad4b9e47f65b6e79b010582f15785867e}
-}]\index{R\+E\+A\+D@{R\+E\+A\+D}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!R\+E\+A\+D@{R\+E\+A\+D}}\item[{\em 
+}]echec de l'écriture dans un registre \index{R\+E\+A\+D@{R\+E\+A\+D}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!R\+E\+A\+D@{R\+E\+A\+D}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5a3466fab4975481651940ed328aa990e4}{R\+E\+A\+D}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5a3466fab4975481651940ed328aa990e4}
-}]\index{D\+E\+V\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!D\+E\+V\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+D\+E\+F}}\item[{\em 
+}]echec de la lecture d'un registre \index{D\+E\+V\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!D\+E\+V\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+D\+E\+F}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2}{D\+E\+V\+\_\+\+D\+E\+F}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2}
-}]\index{S\+L\+A\+V\+E\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!S\+L\+A\+V\+E\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+D\+E\+F}}\item[{\em 
+}]echec de la definition du device I2\+C \index{S\+L\+A\+V\+E\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!S\+L\+A\+V\+E\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+D\+E\+F}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874}{S\+L\+A\+V\+E\+\_\+\+D\+E\+F}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874}
-}]\index{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F}}\item[{\em 
+}]echec de la definition de l'adresse de l'esclave \index{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F@{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ab25df6fa3e61307affa2644bd2251f0b}{D\+E\+V\+\_\+\+N\+O\+\_\+\+D\+E\+F}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ab25df6fa3e61307affa2644bd2251f0b}
-}]\index{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F}}\item[{\em 
+}]le device I2\+C n'est pas défini \index{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F@{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F}}\item[{\em 
 \hypertarget{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ac43160b89b55550045fa76263b24e616}{S\+L\+A\+V\+E\+\_\+\+N\+O\+\_\+\+D\+E\+F}\label{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ac43160b89b55550045fa76263b24e616}
-}]\end{description}
+}]l'esclave n'est pas défini \end{description}
 \end{Desc}
 
 
-Définition à la ligne 30 du fichier C\+I2\+C.\+h.
+Définition à la ligne 36 du fichier C\+I2\+C.\+h.
 
 
 
@@ -100,7 +103,24 @@ Définition à la ligne 30 du fichier C\+I2\+C.\+h.
 \item[{{\bf T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R}}]{erreur, }
 \item[{string const \&}]{phrase}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [noexcept]}}}\label{class_c_i2_c_1_1_erreur_a2db008616ca661df8df52d35e3fa26f9}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{class_c_i2_c_1_1_erreur_a2db008616ca661df8df52d35e3fa26f9}
+
+
+Constructeur de la classe \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}. 
+
+Ce constructeur initialise les parametres de la classe.
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em erreur} & Type d'erreur qui a été levé \\
+\hline
+\mbox{\tt in}  & {\em phrase} & Phrase qui contient un texte sur l'erreur levé \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 60 du fichier C\+I2\+C.\+h.
+
 \hypertarget{class_c_i2_c_1_1_erreur_a8ed19157b6dd1cfe68dba1d4d6fab2d2}{\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!````~Erreur@{$\sim$\+Erreur}}
 \index{````~Erreur@{$\sim$\+Erreur}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}
 \subsubsection[{$\sim$\+Erreur}]{\setlength{\rightskip}{0pt plus 5cm}virtual C\+I2\+C\+::\+Erreur\+::$\sim$\+Erreur (
@@ -108,6 +128,10 @@ Définition à la ligne 30 du fichier C\+I2\+C.\+h.
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_c_i2_c_1_1_erreur_a8ed19157b6dd1cfe68dba1d4d6fab2d2}
+
+
+Destructeur de la classe \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}. 
+
 
 
 \subsection{Documentation des fonctions membres}
@@ -120,7 +144,11 @@ Définition à la ligne 30 du fichier C\+I2\+C.\+h.
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}}\label{class_c_i2_c_1_1_erreur_a1f9da2c2241b49e5be93bf99438190a1}
 
 
-Définition à la ligne 44 du fichier C\+I2\+C.\+h.
+Methode get\+Type\+Erreur. 
+
+
+
+Définition à la ligne 82 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_1_1_erreur_af38041f60a330ca1603d462c01b118f3}{\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!what@{what}}
 \index{what@{what}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}
@@ -131,7 +159,11 @@ Définition à la ligne 44 du fichier C\+I2\+C.\+h.
 ) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}}\label{class_c_i2_c_1_1_erreur_af38041f60a330ca1603d462c01b118f3}
 
 
-Définition à la ligne 40 du fichier C\+I2\+C.\+h.
+Methode what. 
+
+
+
+Définition à la ligne 74 du fichier C\+I2\+C.\+h.
 
 
 
@@ -141,14 +173,22 @@ Définition à la ligne 40 du fichier C\+I2\+C.\+h.
 \subsubsection[{m\+\_\+erreur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} C\+I2\+C\+::\+Erreur\+::m\+\_\+erreur\hspace{0.3cm}{\ttfamily [private]}}}\label{class_c_i2_c_1_1_erreur_a0228754dfbaabca99985b8701fcd92b0}
 
 
-Définition à la ligne 35 du fichier C\+I2\+C.\+h.
+Contient le type de l'erreur. 
+
+
+
+Définition à la ligne 49 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_1_1_erreur_ac61872a33babfea899fa3f3feaedaf32}{\index{C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}!m\+\_\+phrase@{m\+\_\+phrase}}
 \index{m\+\_\+phrase@{m\+\_\+phrase}!C\+I2\+C\+::\+Erreur@{C\+I2\+C\+::\+Erreur}}
 \subsubsection[{m\+\_\+phrase}]{\setlength{\rightskip}{0pt plus 5cm}string C\+I2\+C\+::\+Erreur\+::m\+\_\+phrase\hspace{0.3cm}{\ttfamily [private]}}}\label{class_c_i2_c_1_1_erreur_ac61872a33babfea899fa3f3feaedaf32}
 
 
-Définition à la ligne 34 du fichier C\+I2\+C.\+h.
+Contient une phrase qui correspond à l'erreur. 
+
+
+
+Définition à la ligne 47 du fichier C\+I2\+C.\+h.
 
 
 
