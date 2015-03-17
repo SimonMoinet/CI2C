@@ -21,70 +21,84 @@ esclaves d'un bus I2C
 #include <linux/i2c-dev.h>
 #include <exception>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
 class CI2C {
 	
 	public:
-		/** \class Erreur
-		 * \brief Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C
+
+		/**
+		 * \class ErreurWrite
 		 */
-		class Erreur : public exception {
-			public:
-				/** \enum TYPE_ERREUR
-				 * Cette énumération décrit les erreurs possible de la classes CI2C
-				 */
-				enum class TYPE_ERREUR : int {
-					WRITE, ///< echec de l'écriture dans un registre
-					READ, ///< echec de la lecture d'un registre 
-					DEV_DEF, ///< echec de la definition du device I2C
-					SLAVE_DEF, ///< echec de la definition de l'adresse de l'esclave
-					DEV_NO_DEF, ///< le device I2C n'est pas défini
-					SLAVE_NO_DEF ///< l'esclave n'est pas défini
-				};
-
+		class ErreurWrite : public exception {
 			private:
-				/// Contient une phrase qui correspond à l'erreur
-				string m_phrase;
-				/// Contient le type de l'erreur
-				TYPE_ERREUR m_erreur;
+				int m_reg;
+				int m_data;
 
 			public:
-				/**
-				 * \brief Constructeur de la classe Erreur
-				 *
-				 * Ce constructeur initialise les parametres de la classe.
-				 *
-				 * \param[in] erreur : Le type d'erreur qui a été levé
-				 * \param[in] phrase : Une phrase qui contient un texte sur l'erreur levé
-				 */
-				Erreur(TYPE_ERREUR erreur, string const& phrase) noexcept
-				{
-					m_erreur = erreur;
-					m_phrase = phrase;
-				}
+				ErreurWrite(int reg, int data):m_reg(reg), m_data(data) {};
+				virtual const char* what() const noexcept {
+					stringstream temp;
+					temp << "Erreur d'écriture de la valeur 0x" << hex << m_data << " dans le registre 0x" << m_reg;
+					return temp.str().c_str();
+				};
+		};
 
-				/**
-				 * \brief Destructeur de la classe Erreur
-				 */
-				virtual ~Erreur() noexcept;
+		/**
+		 * \class ErreurRead
+		 */
+		class ErreurRead : public exception {
+			private:
+				int m_reg;
 
-				/**
-				 * \brief Methode what
-				 */
-				virtual const char* what() const noexcept
-				{
-					return m_phrase.c_str();
-				}
+			public:
+				ErreurRead(int reg):m_reg(reg) {};
+				virtual const char* what() const noexcept {
+					stringstream temp;
+					temp << "Erreur de lecture du registre 0x" << hex << m_reg;
+					return temp.str().c_str();
+				};
+		};
 
-				/**
-				 * \brief Methode getTypeErreur
-				 */
-				TYPE_ERREUR getTypeErreur() noexcept
-				{
-					return m_erreur;
-				}
+		class ErreurOpenDev : public exception {
+			private:
+				string m_devName;
+
+			public:
+				ErreurOpenDev(string devName):m_devName(devName) {};
+				virtual const char* what() const noexcept {
+					string temp = "Impossible d'ouvrir le bus i2c : " + m_devName;
+					return temp.c_str();
+				};
+		};
+
+		class ErreurSetAddrSlave : public exception {
+			private:
+				int m_addr;
+
+			public:
+				ErreurSetAddrSlave(int addr):m_addr(addr) {};
+				virtual const char* what() const noexcept {
+					stringstream temp;
+					temp << "Impossible de definir l'esclave avec lequel on veux communiquer. L'eclave est indisponible ou il n'y a pas d'esclave à l'adresse " << hex << m_addr;
+					return temp.str().c_str();
+				};
+		};
+
+		class ErreurDevNotDefine : public exception {
+			public:
+				virtual const char* what() const noexcept {
+					return "Erreur, le device I2C n'est pas défini";
+				};
+		};
+
+		class ErreurSlaveNotDefine : public exception {
+			public:
+				virtual const char* what() const noexcept {
+					return "Erreur, L'esclave n'est pas défini";
+				};
 		};
 
 	private:
@@ -100,6 +114,10 @@ class CI2C {
 		 *
 		 * Cette méthode permet de verifier si le dev et l'esclave sont bien défini
 		 * 
+		 * \exception StringIndexOutOfRangeException
+		 *             if index is not between
+		 *             <code>0</code> and
+		 *             <code>length() - 1</code>.
 		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
 		 * Si le dev n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF
 		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
@@ -127,6 +145,11 @@ class CI2C {
 		 * 
 		 * \param[in] dev : le nom de l'interface I2C
 		 * \param[in] addr_slave : l'addresse de l'esclave sur le bus I2C
+		 *
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si il est impossible de definir le device du bus I2C. Leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF 
 		 */
 		void setupInterface(string dev, __u8 addr_slave);
 
@@ -136,8 +159,12 @@ class CI2C {
 		 * Paramétrage de la nouvelle addresse de l'esclave sur le bus I2C
 		 * 
 		 * \param[in] __u8 addr_slave : la nouvelle addresse de l'esclave
-		 */
-		
+		 *
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si le dev n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF 
+		 */		
 		void setSlaveAddr(__u8 addr_slave);
 		
 		/**

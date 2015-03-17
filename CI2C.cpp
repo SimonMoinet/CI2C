@@ -23,12 +23,12 @@ void CI2C::setupInterface(string dev, __u8 addr_slave)
 {
 	this->dev = open(dev.c_str(), O_RDWR);
 	if(this->dev < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::DEV_DEF, "ERREUR : Impossible d'ouvrir le bus I2C -> " + dev);
+		throw ErreurOpenDev(dev);
 
 	isSetDev = true;
 
 	if(ioctl(this->dev, I2C_SLAVE, addr_slave) < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::SLAVE_DEF, "ERREUR : Impossible de definir l'esclave avec lequel on veux communiquer. L'eclave est indisponible ou il n'y a pas d'esclave à l'adresse " + to_string(addr_slave));
+		throw ErreurSetAddrSlave(static_cast<int>(addr_slave));
 
 	isSetSlave = true;
 }
@@ -36,9 +36,12 @@ void CI2C::setupInterface(string dev, __u8 addr_slave)
 // Methode setSlaveAddr
 void CI2C::setSlaveAddr(__u8 addr_slave)
 {
+	if(!isSetDev)
+		throw ErreurDevNotDefine();
+
 	if(ioctl(this->dev, I2C_SLAVE, addr_slave) < 0)
 	{
-		throw Erreur(Erreur::TYPE_ERREUR::SLAVE_DEF, "ERREUR : Impossible de definir l'esclave avec lequel on veux communiquer. L'eclave est indisponible ou il n'y a pas d'esclave à l'adresse " + to_string(addr_slave));
+		throw ErreurSetAddrSlave(static_cast<int>(addr_slave));
 		isSetSlave = false;
 	}
 
@@ -48,10 +51,10 @@ void CI2C::setSlaveAddr(__u8 addr_slave)
 void CI2C::isSetInterface()
 {
 	if(!isSetDev)
-		throw Erreur(Erreur::TYPE_ERREUR::DEV_NO_DEF, "ERREUR : Le device n'est pas défini");
+		throw ErreurDevNotDefine();
 
 	if(!isSetSlave)
-		throw Erreur(Erreur::TYPE_ERREUR::SLAVE_NO_DEF, "ERREUR : L'esclave n'est pas défini");
+		throw ErreurSlaveNotDefine();
 }
 
 // Methode readByte
@@ -63,7 +66,7 @@ int CI2C::readByte(__u8 reg)
 
 	res = i2c_smbus_read_byte_data(this->dev, reg);
 	if(res < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::READ, "ERREUR : Impossible de lire la valeur du registre " + to_string(reg));
+		throw ErreurRead(static_cast<int>(reg));
 
 	return static_cast<int>(res);
 }
@@ -77,7 +80,7 @@ int CI2C::readWord(__u8 reg)
 
 	res = i2c_smbus_read_word_data(this->dev, reg);
 	if(res < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::READ, "ERREUR : Impossible de lire la valeur du registre " + to_string(reg));
+		throw ErreurRead(static_cast<int>(reg));
 
 	return static_cast<int>(res);
 }
@@ -91,7 +94,7 @@ void CI2C::writeByte(__u8 reg, __u8 data)
 
 	error = i2c_smbus_write_byte_data(this->dev, reg, data);
 	if(error < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::WRITE, "ERREUR : Impossible d'écrire la valeur " + to_string(data) + " dans le registre " + to_string(reg));
+		throw ErreurWrite(static_cast<int>(reg), static_cast<int>(data));
 }
 
 // Methode writeWord
@@ -103,5 +106,5 @@ void CI2C::writeWord(__u8 reg, __u16 data)
 
 	error = i2c_smbus_write_word_data(this->dev, reg, data);
 	if(error < 0)
-		throw Erreur(Erreur::TYPE_ERREUR::WRITE, "ERREUR : Impossible d'écrire la valeur " + to_string(data) + " dans le registre " + to_string(reg));
+		throw ErreurWrite(static_cast<int>(reg), static_cast<int>(data));
 }
