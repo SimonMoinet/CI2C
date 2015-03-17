@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7eci2c',['~CI2C',['../class_c_i2_c.html#ae757710bb84ab327217092f0af851a16',1,'CI2C']]]
+  ['readbyte',['readByte',['../class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a',1,'CI2C']]],
+  ['readword',['readWord',['../class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a',1,'CI2C']]]
 ];

@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
       <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
       <li class="current"><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
     </ul>
   </div>
@@ -70,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       <li><a href="functions.html"><span>Tout</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Fonctions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Énumérations</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -78,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,6 +94,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <li>CI2C()
 : <a class="el" href="class_c_i2_c.html#a2df83a2627a8b8bf91460a68372c9ed5">CI2C</a>
 </li>
+<li>Erreur()
+: <a class="el" href="class_c_i2_c_1_1_erreur.html#a2db008616ca661df8df52d35e3fa26f9">CI2C::Erreur</a>
+</li>
+<li>getTypeErreur()
+: <a class="el" href="class_c_i2_c_1_1_erreur.html#a1f9da2c2241b49e5be93bf99438190a1">CI2C::Erreur</a>
+</li>
+<li>isSetInterface()
+: <a class="el" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">CI2C</a>
+</li>
 <li>readByte()
 : <a class="el" href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">CI2C</a>
 </li>
@@ -99,25 +110,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 : <a class="el" href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">CI2C</a>
 </li>
 <li>setSlaveAddr()
-: <a class="el" href="class_c_i2_c.html#acad42c3e7d1046f569f720592eeaa5b1">CI2C</a>
+: <a class="el" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">CI2C</a>
 </li>
 <li>setupInterface()
-: <a class="el" href="class_c_i2_c.html#a81c326c1f0fe2d148cf41e980cf52d26">CI2C</a>
+: <a class="el" href="class_c_i2_c.html#a8fe8755470906582ab854edcbf2a2992">CI2C</a>
+</li>
+<li>what()
+: <a class="el" href="class_c_i2_c_1_1_erreur.html#af38041f60a330ca1603d462c01b118f3">CI2C::Erreur</a>
 </li>
 <li>writeByte()
-: <a class="el" href="class_c_i2_c.html#a23e7d4c1c3366e5224887900089b90e9">CI2C</a>
+: <a class="el" href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">CI2C</a>
 </li>
 <li>writeWord()
-: <a class="el" href="class_c_i2_c.html#a7827b6188049f9f4a6d57ac5ebaa8536">CI2C</a>
+: <a class="el" href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">CI2C</a>
 </li>
 <li>~CI2C()
 : <a class="el" href="class_c_i2_c.html#ae757710bb84ab327217092f0af851a16">CI2C</a>
+</li>
+<li>~Erreur()
+: <a class="el" href="class_c_i2_c_1_1_erreur.html#a8ed19157b6dd1cfe68dba1d4d6fab2d2">CI2C::Erreur</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 08:23:16 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mardi 17 Mars 2015 10:26:40 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
