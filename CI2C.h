@@ -6,9 +6,9 @@
 Cette classe CI2C permet de lire/écrire les valeurs de registres des 
 esclaves d'un bus I2C
 
-\file CI2C.cpp
+\file CI2C.h
 \class CI2C
-\biref Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C
+\brief Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C
 */
 
 #ifndef CI2C_H
@@ -25,22 +25,60 @@ using namespace std;
 class CI2C {
 	
 	public:
+		/** \class Erreur
+		 * \brief Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C
+		 */
 		class Erreur : public exception {
 			public:
-				enum class TYPE_ERREUR : int
-				{WRITE, READ, DEV_DEF, SLAVE_DEF, DEV_NO_DEF, SLAVE_NO_DEF};
+				/** \enum TYPE_ERREUR
+				 * Cette énumération décrit les erreurs possible de la classes CI2C
+				 */
+				enum class TYPE_ERREUR : int {
+					WRITE, ///< echec de l'écriture dans un registre
+					READ, ///< echec de la lecture d'un registre 
+					DEV_DEF, ///< echec de la definition du device I2C
+					SLAVE_DEF, ///< echec de la definition de l'adresse de l'esclave
+					DEV_NO_DEF, ///< le device I2C n'est pas défini
+					SLAVE_NO_DEF ///< l'esclave n'est pas défini
+				};
 
 			private:
+				/// Contient une phrase qui correspond à l'erreur
 				string m_phrase;
+				/// Contient le type de l'erreur
 				TYPE_ERREUR m_erreur;
 
 			public:
-				Erreur(TYPE_ERREUR erreur, string const& phrase) noexcept;
+				/**
+				 * \brief Constructeur de la classe Erreur
+				 *
+				 * Ce constructeur initialise les parametres de la classe.
+				 *
+				 * \param[in] erreur : Le type d'erreur qui a été levé
+				 * \param[in] phrase : Une phrase qui contient un texte sur l'erreur levé
+				 */
+				Erreur(TYPE_ERREUR erreur, string const& phrase) noexcept
+				{
+					m_erreur = erreur;
+					m_phrase = phrase;
+				}
+
+				/**
+				 * \brief Destructeur de la classe Erreur
+				 */
 				virtual ~Erreur() noexcept;
+
+				/**
+				 * \brief Methode what
+				 */
 				virtual const char* what() const noexcept
 				{
 					return m_phrase.c_str();
 				}
+
+				/**
+				 * \brief Methode getTypeErreur
+				 */
 				TYPE_ERREUR getTypeErreur() noexcept
 				{
 					return m_erreur;
@@ -48,10 +86,23 @@ class CI2C {
 		};
 
 	private:
-		int dev; ///<Contient les informations du bus I2C
-		bool isSetDev;
+		/// Contient les informations du bus I2C
+		int dev;
+		/// Bool qui permet de savoir si le dev est défini
+		bool isSetDev; 
+		/// Bool qui permet de savoir sur l'esclave est défini
 		bool isSetSlave;
 
+		/**
+		 * \brief Methode isSetInterface
+		 *
+		 * Cette méthode permet de verifier si le dev et l'esclave sont bien défini
+		 * 
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si le dev n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF
+		 * \exception Erreur(TYPE_ERREUR erreur, string const& phrase)
+		 * Si l'esclave n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF
+		 */
 		void isSetInterface();
 
 	public:
