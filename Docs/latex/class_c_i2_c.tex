@@ -1,0 +1,210 @@
+\hypertarget{class_c_i2_c}{\section{Référence de la classe C\+I2\+C}
+\label{class_c_i2_c}\index{C\+I2\+C@{C\+I2\+C}}
+}
+
+
+{\ttfamily \#include $<$C\+I2\+C.\+h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_i2_c_a2df83a2627a8b8bf91460a68372c9ed5}{C\+I2\+C} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}. \end{DoxyCompactList}\item 
+\hyperlink{class_c_i2_c_ae757710bb84ab327217092f0af851a16}{$\sim$\+C\+I2\+C} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_i2_c_a81c326c1f0fe2d148cf41e980cf52d26}{setup\+Interface} (string \hyperlink{class_c_i2_c_ae2d4648eadc2acae86a49cecbf39ce56}{dev}, \+\_\+\+\_\+u8 addr\+\_\+slave)
+\begin{DoxyCompactList}\small\item\em Methode setup\+Interface. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_i2_c_acad42c3e7d1046f569f720592eeaa5b1}{set\+Slave\+Addr} (\+\_\+\+\_\+u8 addr\+\_\+slave)
+\begin{DoxyCompactList}\small\item\em Paramétrage de la nouvelle addresse de l'esclave sur le bus I2\+C. \end{DoxyCompactList}\item 
+int \hyperlink{class_c_i2_c_afb589b9bdefa75257807b4e6ac2c1c5a}{read\+Byte} (\+\_\+\+\_\+u8 reg=0)
+\begin{DoxyCompactList}\small\item\em Lecture du registre sur un octet. Par default la valeur est fixé à zéro dans le cas d'un esclave sans registre. \end{DoxyCompactList}\item 
+int \hyperlink{class_c_i2_c_a283d5f6d8371e2abb6532b9e32392f9a}{read\+Word} (\+\_\+\+\_\+u8 reg=0)
+\begin{DoxyCompactList}\small\item\em Lecture du registre sur deux octets. Par default la valeur est ficé à zéro dans le cas d'un esclave sans registre. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_i2_c_a23e7d4c1c3366e5224887900089b90e9}{write\+Byte} (\+\_\+\+\_\+u8 reg, \+\_\+\+\_\+u8 data)
+\begin{DoxyCompactList}\small\item\em Ecriture dans un registre sur un octet. \end{DoxyCompactList}\item 
+bool \hyperlink{class_c_i2_c_a7827b6188049f9f4a6d57ac5ebaa8536}{write\+Word} (\+\_\+\+\_\+u8 reg, \+\_\+\+\_\+u16 data)
+\begin{DoxyCompactList}\small\item\em Ecriture dans un registre sur deux octets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_c_i2_c_ae2d4648eadc2acae86a49cecbf39ce56}{dev}
+\begin{DoxyCompactList}\small\item\em Contient les informations du bus I2\+C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C 
+
+Définition à la ligne 24 du fichier C\+I2\+C.\+h.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_c_i2_c_a2df83a2627a8b8bf91460a68372c9ed5}{\index{C\+I2\+C@{C\+I2\+C}!C\+I2\+C@{C\+I2\+C}}
+\index{C\+I2\+C@{C\+I2\+C}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{C\+I2\+C}]{\setlength{\rightskip}{0pt plus 5cm}C\+I2\+C\+::\+C\+I2\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_a2df83a2627a8b8bf91460a68372c9ed5}
+
+
+Constructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}. 
+
+Ce constructeur initialise les attributs de la classe. \hypertarget{class_c_i2_c_ae757710bb84ab327217092f0af851a16}{\index{C\+I2\+C@{C\+I2\+C}!````~C\+I2\+C@{$\sim$\+C\+I2\+C}}
+\index{````~C\+I2\+C@{$\sim$\+C\+I2\+C}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{$\sim$\+C\+I2\+C}]{\setlength{\rightskip}{0pt plus 5cm}C\+I2\+C\+::$\sim$\+C\+I2\+C (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_ae757710bb84ab327217092f0af851a16}
+
+
+Destructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}. 
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_c_i2_c_afb589b9bdefa75257807b4e6ac2c1c5a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Byte@{read\+Byte}}
+\index{read\+Byte@{read\+Byte}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{read\+Byte}]{\setlength{\rightskip}{0pt plus 5cm}int C\+I2\+C\+::read\+Byte (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+u8}]{reg = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_afb589b9bdefa75257807b4e6ac2c1c5a}
+
+
+Lecture du registre sur un octet. Par default la valeur est fixé à zéro dans le cas d'un esclave sans registre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+\+\_\+u8} & reg \+: le registre que l'on veux lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un int contenant l'octet du registre lu 
+\end{DoxyReturn}
+\hypertarget{class_c_i2_c_a283d5f6d8371e2abb6532b9e32392f9a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Word@{read\+Word}}
+\index{read\+Word@{read\+Word}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{read\+Word}]{\setlength{\rightskip}{0pt plus 5cm}int C\+I2\+C\+::read\+Word (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+u8}]{reg = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_a283d5f6d8371e2abb6532b9e32392f9a}
+
+
+Lecture du registre sur deux octets. Par default la valeur est ficé à zéro dans le cas d'un esclave sans registre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+\+\_\+u8} & reg \+: le registre que l'on veux lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un int contenant les deux octets du registre lu 
+\end{DoxyReturn}
+\hypertarget{class_c_i2_c_acad42c3e7d1046f569f720592eeaa5b1}{\index{C\+I2\+C@{C\+I2\+C}!set\+Slave\+Addr@{set\+Slave\+Addr}}
+\index{set\+Slave\+Addr@{set\+Slave\+Addr}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{set\+Slave\+Addr}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+I2\+C\+::set\+Slave\+Addr (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+u8}]{addr\+\_\+slave}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_acad42c3e7d1046f569f720592eeaa5b1}
+
+
+Paramétrage de la nouvelle addresse de l'esclave sur le bus I2\+C. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+\+\_\+u8} & addr\+\_\+slave \+: la nouvelle addresse de l'esclave \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l'initialisation à reussi false sinon 
+\end{DoxyReturn}
+\hypertarget{class_c_i2_c_a81c326c1f0fe2d148cf41e980cf52d26}{\index{C\+I2\+C@{C\+I2\+C}!setup\+Interface@{setup\+Interface}}
+\index{setup\+Interface@{setup\+Interface}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{setup\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+I2\+C\+::setup\+Interface (
+\begin{DoxyParamCaption}
+\item[{string}]{dev, }
+\item[{\+\_\+\+\_\+u8}]{addr\+\_\+slave}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_a81c326c1f0fe2d148cf41e980cf52d26}
+
+
+Methode setup\+Interface. 
+
+Initialisation de l'interface I2\+C et de son esclave
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em string} & dev \+: le nom de l'interface I2\+C \\
+\hline
+\mbox{\tt in}  & {\em \+\_\+\+\_\+u8} & addr\+\_\+slave \+: l'addresse de l'esclave sur le bus I2\+C \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l'initialisation à réussi false sinon 
+\end{DoxyReturn}
+\hypertarget{class_c_i2_c_a23e7d4c1c3366e5224887900089b90e9}{\index{C\+I2\+C@{C\+I2\+C}!write\+Byte@{write\+Byte}}
+\index{write\+Byte@{write\+Byte}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{write\+Byte}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+I2\+C\+::write\+Byte (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+u8}]{reg, }
+\item[{\+\_\+\+\_\+u8}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_a23e7d4c1c3366e5224887900089b90e9}
+
+
+Ecriture dans un registre sur un octet. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+\+\_\+u8} & reg \+: le registre où on veux écrire \\
+\hline
+{\em \+\_\+\+\_\+u8} & data \+: l'octet que l'on veux ecrire dans le registre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l'écriture a réussi, false sinon 
+\end{DoxyReturn}
+\hypertarget{class_c_i2_c_a7827b6188049f9f4a6d57ac5ebaa8536}{\index{C\+I2\+C@{C\+I2\+C}!write\+Word@{write\+Word}}
+\index{write\+Word@{write\+Word}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{write\+Word}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+I2\+C\+::write\+Word (
+\begin{DoxyParamCaption}
+\item[{\+\_\+\+\_\+u8}]{reg, }
+\item[{\+\_\+\+\_\+u16}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_c_i2_c_a7827b6188049f9f4a6d57ac5ebaa8536}
+
+
+Ecriture dans un registre sur deux octets. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \+\_\+\+\_\+u8} & reg \+: le registre où on veux écrire \\
+\hline
+{\em \+\_\+\+\_\+u16} & data \+: les deux otets que l'on veux ecrire dans le registre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l'écriture a réussi, false sinon 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_c_i2_c_ae2d4648eadc2acae86a49cecbf39ce56}{\index{C\+I2\+C@{C\+I2\+C}!dev@{dev}}
+\index{dev@{dev}!C\+I2\+C@{C\+I2\+C}}
+\subsubsection[{dev}]{\setlength{\rightskip}{0pt plus 5cm}int C\+I2\+C\+::dev\hspace{0.3cm}{\ttfamily [private]}}}\label{class_c_i2_c_ae2d4648eadc2acae86a49cecbf39ce56}
+
+
+Contient les informations du bus I2\+C. 
+
+
+
+Définition à la ligne 27 du fichier C\+I2\+C.\+h.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+/home/jam/\+Bureau/\+C++/\+Classes/\+C\+I2\+C/\hyperlink{_c_i2_c_8h}{C\+I2\+C.\+h}\end{DoxyCompactItemize}
