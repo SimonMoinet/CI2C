@@ -7,6 +7,8 @@ Cette classe CI2C permet de lire/écrire les valeurs de registres des
 esclaves d'un bus I2C
 
 \file CI2C.h
+\brief Contient la declaration de la CI2C
+
 \class CI2C
 \brief Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C
 */

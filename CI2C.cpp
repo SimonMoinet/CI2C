@@ -1,3 +1,8 @@
+/**
+\file CI2C.cpp
+\brief Contient la définition de la classe CI2C
+*/
+
 #include "CI2C.h"
 
 // Constructeur
