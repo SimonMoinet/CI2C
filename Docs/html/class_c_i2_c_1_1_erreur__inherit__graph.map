@@ -1,2 +1,8 @@
 <map id="CI2C::Erreur" name="CI2C::Erreur">
+<area shape="rect" id="node3" href="$class_c_i2_c_1_1_erreur_dev_not_define.html" title="CI2C::ErreurDevNotDefine" alt="" coords="281,5,459,32"/>
+<area shape="rect" id="node4" href="$class_c_i2_c_1_1_erreur_open_dev.html" title="CI2C::ErreurOpenDev" alt="" coords="295,56,445,83"/>
+<area shape="rect" id="node5" href="$class_c_i2_c_1_1_erreur_read.html" title="CI2C::ErreurRead" alt="" coords="307,107,433,133"/>
+<area shape="rect" id="node6" href="$class_c_i2_c_1_1_erreur_set_addr_slave.html" title="CI2C::ErreurSetAddrSlave" alt="" coords="282,157,458,184"/>
+<area shape="rect" id="node7" href="$class_c_i2_c_1_1_erreur_slave_not_define.html" title="CI2C::ErreurSlaveNotDefine" alt="" coords="276,208,464,235"/>
+<area shape="rect" id="node8" href="$class_c_i2_c_1_1_erreur_write.html" title="CI2C::ErreurWrite" alt="" coords="307,259,433,285"/>
 </map>

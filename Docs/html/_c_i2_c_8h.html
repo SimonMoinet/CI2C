@@ -68,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,6 +85,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence du fichier /home/jam/Bureau/C++/Classes/CI2C/CI2C.h</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contient la declaration de la <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>.  
+<a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;fcntl.h&gt;</code><br />
 <code>#include &lt;sys/ioctl.h&gt;</code><br />
 <code>#include &lt;linux/i2c-dev.h&gt;</code><br />
@@ -100,7 +103,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="_c_i2_c_8h__dep__incl.png" border="0" usemap="#_2home_2jam_2_bureau_2_c_09_09_2_classes_2_c_i2_c_2_c_i2_c_8hdep" alt=""/></div>
 <map name="_2home_2jam_2_bureau_2_c_09_09_2_classes_2_c_i2_c_2_c_i2_c_8hdep" id="_2home_2jam_2_bureau_2_c_09_09_2_classes_2_c_i2_c_2_c_i2_c_8hdep">
-<area shape="rect" id="node2" href="_c_i2_c_8cpp.html" title="/home/jam/Bureau/C\l++/Classes/CI2C/CI2C.cpp" alt="" coords="5,95,191,136"/></map>
+<area shape="rect" id="node2" href="_c_i2_c_8cpp.html" title="Contient la définition de la classe CI2C. " alt="" coords="5,95,191,136"/></map>
 </div>
 </div>
 <p><a href="_c_i2_c_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -111,13 +114,28 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette classe <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a> permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C.  <a href="class_c_i2_c.html#details">Plus de détails...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html">CI2C::Erreur</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>.  <a href="class_c_i2_c_1_1_erreur.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_write.html">CI2C::ErreurWrite</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html">CI2C::ErreurRead</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_open_dev.html">CI2C::ErreurOpenDev</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html">CI2C::ErreurSetAddrSlave</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_dev_not_define.html">CI2C::ErreurDevNotDefine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_slave_not_define.html">CI2C::ErreurSlaveNotDefine</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Contient la declaration de la <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>. </p>
+
+<p>Définition dans le fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 11:12:02 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

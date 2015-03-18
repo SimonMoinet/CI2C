@@ -14,7 +14,19 @@ Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeu
 \begin{DoxyCompactItemize}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}
-\begin{DoxyCompactList}\small\item\em Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes \hyperlink{class_c_i2_c}{C\+I2\+C}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_dev_not_define}{Erreur\+Dev\+Not\+Define}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_open_dev}{Erreur\+Open\+Dev}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_read}{Erreur\+Read}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_set_addr_slave}{Erreur\+Set\+Addr\+Slave}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_slave_not_define}{Erreur\+Slave\+Not\+Define}
+\item 
+class \hyperlink{class_c_i2_c_1_1_erreur_write}{Erreur\+Write}
+\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,7 +65,7 @@ bool \hyperlink{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{is\+Set\+Slave}
 \subsection{Description détaillée}
 Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C. 
 
-Définition à la ligne 25 du fichier C\+I2\+C.\+h.
+Définition à la ligne 27 du fichier C\+I2\+C.\+h.
 
 
 
@@ -71,7 +83,7 @@ Constructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}.
 
 Ce constructeur initialise les attributs de la classe. 
 
-Définition à la ligne 4 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 9 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_ae757710bb84ab327217092f0af851a16}{\index{C\+I2\+C@{C\+I2\+C}!````~C\+I2\+C@{$\sim$\+C\+I2\+C}}
 \index{````~C\+I2\+C@{$\sim$\+C\+I2\+C}!C\+I2\+C@{C\+I2\+C}}
@@ -86,7 +98,7 @@ Destructeur de la classe \hyperlink{class_c_i2_c}{C\+I2\+C}.
 
 
 
-Définition à la ligne 12 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 17 du fichier C\+I2\+C.\+cpp.
 
 
 
@@ -106,14 +118,16 @@ Cette méthode permet de verifier si le dev et l'esclave sont bien défini
 
 
 \begin{DoxyExceptions}{Exceptions}
-{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si le dev n'est pas défini, leve une exception de type \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2}{Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+D\+E\+V\+\_\+\+D\+E\+F} \\
+{\em String\+Index\+Out\+Of\+Range\+Exception} & if index is not between {\ttfamily 0} and {\ttfamily length() -\/ 1}. \\
 \hline
-{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si l'esclave n'est pas défini, leve une exception de type \hyperlink{class_c_i2_c_1_1_erreur_a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874}{Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+S\+L\+A\+V\+E\+\_\+\+D\+E\+F} \\
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si le dev n'est pas défini, leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+D\+E\+V\+\_\+\+D\+E\+F \\
+\hline
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si l'esclave n'est pas défini, leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+S\+L\+A\+V\+E\+\_\+\+D\+E\+F \\
 \hline
 \end{DoxyExceptions}
 
 
-Définition à la ligne 43 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 51 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_afb589b9bdefa75257807b4e6ac2c1c5a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Byte@{read\+Byte}}
 \index{read\+Byte@{read\+Byte}!C\+I2\+C@{C\+I2\+C}}
@@ -138,7 +152,7 @@ Un int contenant l'octet du registre lu
 \end{DoxyReturn}
 
 
-Définition à la ligne 53 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 61 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a283d5f6d8371e2abb6532b9e32392f9a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Word@{read\+Word}}
 \index{read\+Word@{read\+Word}!C\+I2\+C@{C\+I2\+C}}
@@ -163,7 +177,7 @@ Un int contenant les deux octets du registre lu
 \end{DoxyReturn}
 
 
-Définition à la ligne 67 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 75 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_ae766fc56ba88f9063e86412fca0c1dfc}{\index{C\+I2\+C@{C\+I2\+C}!set\+Slave\+Addr@{set\+Slave\+Addr}}
 \index{set\+Slave\+Addr@{set\+Slave\+Addr}!C\+I2\+C@{C\+I2\+C}}
@@ -180,12 +194,19 @@ Paramétrage de la nouvelle addresse de l'esclave sur le bus I2\+C
 
 
 \begin{DoxyParams}[1]{Paramètres}
-\mbox{\tt in}  & {\em \+\_\+\+\_\+u8} & addr\+\_\+slave \+: la nouvelle addresse de l'esclave \\
+\mbox{\tt in}  & {\em \+\_\+\+\_\+u8} & addr\+\_\+slave \+: la nouvelle addresse de l'esclave\\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si le dev n'est pas défini, leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+D\+E\+V\+\_\+\+D\+E\+F \\
+\hline
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+S\+L\+A\+V\+E\+\_\+\+D\+E\+F \\
+\hline
+\end{DoxyExceptions}
 
-Définition à la ligne 32 du fichier C\+I2\+C.\+cpp.
+
+Définition à la ligne 37 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a8fe8755470906582ab854edcbf2a2992}{\index{C\+I2\+C@{C\+I2\+C}!setup\+Interface@{setup\+Interface}}
 \index{setup\+Interface@{setup\+Interface}!C\+I2\+C@{C\+I2\+C}}
@@ -205,12 +226,19 @@ Initialisation de l'interface I2\+C et de son esclave.
 \begin{DoxyParams}[1]{Paramètres}
 \mbox{\tt in}  & {\em dev} & \+: le nom de l'interface I2\+C \\
 \hline
-\mbox{\tt in}  & {\em addr\+\_\+slave} & \+: l'addresse de l'esclave sur le bus I2\+C \\
+\mbox{\tt in}  & {\em addr\+\_\+slave} & \+: l'addresse de l'esclave sur le bus I2\+C\\
 \hline
 \end{DoxyParams}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si il est impossible de definir le device du bus I2\+C. Leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+D\+E\+V\+\_\+\+D\+E\+F \\
+\hline
+{\em Erreur(\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R} & erreur, string const\& phrase) Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur\+::\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+E\+U\+R\+::\+S\+L\+A\+V\+E\+\_\+\+D\+E\+F \\
+\hline
+\end{DoxyExceptions}
 
-Définition à la ligne 17 du fichier C\+I2\+C.\+cpp.
+
+Définition à la ligne 22 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a26517fc7e3a282863ff09e7a792f4386}{\index{C\+I2\+C@{C\+I2\+C}!write\+Byte@{write\+Byte}}
 \index{write\+Byte@{write\+Byte}!C\+I2\+C@{C\+I2\+C}}
@@ -238,7 +266,7 @@ true si l'écriture a réussi, false sinon
 \end{DoxyReturn}
 
 
-Définition à la ligne 81 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 89 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a14250174d9281db1bc1db2360cacee40}{\index{C\+I2\+C@{C\+I2\+C}!write\+Word@{write\+Word}}
 \index{write\+Word@{write\+Word}!C\+I2\+C@{C\+I2\+C}}
@@ -266,7 +294,7 @@ true si l'écriture a réussi, false sinon
 \end{DoxyReturn}
 
 
-Définition à la ligne 93 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 101 du fichier C\+I2\+C.\+cpp.
 
 
 
@@ -280,7 +308,7 @@ Contient les informations du bus I2\+C.
 
 
 
-Définition à la ligne 90 du fichier C\+I2\+C.\+h.
+Définition à la ligne 119 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a892d111f995589334497f2b573ab436d}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Dev@{is\+Set\+Dev}}
 \index{is\+Set\+Dev@{is\+Set\+Dev}!C\+I2\+C@{C\+I2\+C}}
@@ -291,7 +319,7 @@ Bool qui permet de savoir si le dev est défini.
 
 
 
-Définition à la ligne 92 du fichier C\+I2\+C.\+h.
+Définition à la ligne 121 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Slave@{is\+Set\+Slave}}
 \index{is\+Set\+Slave@{is\+Set\+Slave}!C\+I2\+C@{C\+I2\+C}}
@@ -302,7 +330,7 @@ Bool qui permet de savoir sur l'esclave est défini.
 
 
 
-Définition à la ligne 94 du fichier C\+I2\+C.\+h.
+Définition à la ligne 123 du fichier C\+I2\+C.\+h.
 
 
 

@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,8 +87,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Types publics</a> &#124;
-<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="class_c_i2_c_1_1_erreur-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -96,259 +95,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 
-<p>Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>.  
- <a href="class_c_i2_c_1_1_erreur.html#details">Plus de détails...</a></p>
-
 <p><code>#include &lt;<a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de CI2C::Erreur:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur__inherit__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_inherit__map" alt="Inheritance graph"/></div>
+<map name="_c_i2_c_1_1_erreur_inherit__map" id="_c_i2_c_1_1_erreur_inherit__map">
+<area shape="rect" id="node3" href="class_c_i2_c_1_1_erreur_dev_not_define.html" title="CI2C::ErreurDevNotDefine" alt="" coords="281,5,459,32"/><area shape="rect" id="node4" href="class_c_i2_c_1_1_erreur_open_dev.html" title="CI2C::ErreurOpenDev" alt="" coords="295,56,445,83"/><area shape="rect" id="node5" href="class_c_i2_c_1_1_erreur_read.html" title="CI2C::ErreurRead" alt="" coords="307,107,433,133"/><area shape="rect" id="node6" href="class_c_i2_c_1_1_erreur_set_addr_slave.html" title="CI2C::ErreurSetAddrSlave" alt="" coords="282,157,458,184"/><area shape="rect" id="node7" href="class_c_i2_c_1_1_erreur_slave_not_define.html" title="CI2C::ErreurSlaveNotDefine" alt="" coords="276,208,464,235"/><area shape="rect" id="node8" href="class_c_i2_c_1_1_erreur_write.html" title="CI2C::ErreurWrite" alt="" coords="307,259,433,285"/></map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de CI2C::Erreur:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur__coll__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_coll__map" alt="Collaboration graph"/></div>
+<map name="_c_i2_c_1_1_erreur_coll__map" id="_c_i2_c_1_1_erreur_coll__map">
+</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Types publics</h2></td></tr>
-<tr class="memitem:a153281c8e751b72b355d52c548b511d5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a> : int { <br />
-&#160;&#160;<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ad4b9e47f65b6e79b010582f15785867e">TYPE_ERREUR::WRITE</a>, 
-<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5a3466fab4975481651940ed328aa990e4">TYPE_ERREUR::READ</a>, 
-<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2">TYPE_ERREUR::DEV_DEF</a>, 
-<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874">TYPE_ERREUR::SLAVE_DEF</a>, 
-<br />
-&#160;&#160;<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ab25df6fa3e61307affa2644bd2251f0b">TYPE_ERREUR::DEV_NO_DEF</a>, 
-<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ac43160b89b55550045fa76263b24e616">TYPE_ERREUR::SLAVE_NO_DEF</a>
-<br />
- }</td></tr>
-<tr class="separator:a153281c8e751b72b355d52c548b511d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a2db008616ca661df8df52d35e3fa26f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a2db008616ca661df8df52d35e3fa26f9">Erreur</a> (<a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a> erreur, string const &amp;phrase) noexcept</td></tr>
-<tr class="memdesc:a2db008616ca661df8df52d35e3fa26f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_c_i2_c_1_1_erreur.html" title="Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C...">Erreur</a>.  <a href="#a2db008616ca661df8df52d35e3fa26f9">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2db008616ca661df8df52d35e3fa26f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ed19157b6dd1cfe68dba1d4d6fab2d2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a8ed19157b6dd1cfe68dba1d4d6fab2d2">~Erreur</a> () noexcept</td></tr>
-<tr class="memdesc:a8ed19157b6dd1cfe68dba1d4d6fab2d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe <a class="el" href="class_c_i2_c_1_1_erreur.html" title="Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C...">Erreur</a>.  <a href="#a8ed19157b6dd1cfe68dba1d4d6fab2d2">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8ed19157b6dd1cfe68dba1d4d6fab2d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af38041f60a330ca1603d462c01b118f3"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#af38041f60a330ca1603d462c01b118f3">what</a> () const noexcept</td></tr>
-<tr class="memdesc:af38041f60a330ca1603d462c01b118f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode what.  <a href="#af38041f60a330ca1603d462c01b118f3">Plus de détails...</a><br /></td></tr>
-<tr class="separator:af38041f60a330ca1603d462c01b118f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f9da2c2241b49e5be93bf99438190a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a1f9da2c2241b49e5be93bf99438190a1">getTypeErreur</a> () noexcept</td></tr>
-<tr class="memdesc:a1f9da2c2241b49e5be93bf99438190a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode getTypeErreur.  <a href="#a1f9da2c2241b49e5be93bf99438190a1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a1f9da2c2241b49e5be93bf99438190a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:a72fc33a3697019d8261a3a00ac091f9f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(string const <br class="typebreak" />
+&amp;phrase=&quot;Erreur inconnu&quot;) <br class="typebreak" />
+const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a72fc33a3697019d8261a3a00ac091f9f">what</a> () noexcept</td></tr>
+<tr class="separator:a72fc33a3697019d8261a3a00ac091f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:ac61872a33babfea899fa3f3feaedaf32"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#ac61872a33babfea899fa3f3feaedaf32">m_phrase</a></td></tr>
-<tr class="memdesc:ac61872a33babfea899fa3f3feaedaf32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient une phrase qui correspond à l'erreur.  <a href="#ac61872a33babfea899fa3f3feaedaf32">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac61872a33babfea899fa3f3feaedaf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0228754dfbaabca99985b8701fcd92b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a0228754dfbaabca99985b8701fcd92b0">m_erreur</a></td></tr>
-<tr class="memdesc:a0228754dfbaabca99985b8701fcd92b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient le type de l'erreur.  <a href="#a0228754dfbaabca99985b8701fcd92b0">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0228754dfbaabca99985b8701fcd92b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock"><p>Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>. </p>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00031">31</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-</div><h2 class="groupheader">Documentation des énumérations membres</h2>
-<a class="anchor" id="a153281c8e751b72b355d52c548b511d5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">CI2C::Erreur::TYPE_ERREUR</a> : int</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Cette énumération décrit les erreurs possible de la classes <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a> </p>
-<table class="fieldtable">
-<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5ad4b9e47f65b6e79b010582f15785867e"></a>WRITE&#160;</td><td class="fielddoc">
-<p>echec de l'écriture dans un registre </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5a3466fab4975481651940ed328aa990e4"></a>READ&#160;</td><td class="fielddoc">
-<p>echec de la lecture d'un registre </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2"></a>DEV_DEF&#160;</td><td class="fielddoc">
-<p>echec de la definition du device I2C </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874"></a>SLAVE_DEF&#160;</td><td class="fielddoc">
-<p>echec de la definition de l'adresse de l'esclave </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5ab25df6fa3e61307affa2644bd2251f0b"></a>DEV_NO_DEF&#160;</td><td class="fielddoc">
-<p>le device I2C n'est pas défini </p>
-</td></tr>
-<tr><td class="fieldname"><a class="anchor" id="a153281c8e751b72b355d52c548b511d5ac43160b89b55550045fa76263b24e616"></a>SLAVE_NO_DEF&#160;</td><td class="fielddoc">
-<p>l'esclave n'est pas défini </p>
-</td></tr>
-</table>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00036">36</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a class="anchor" id="a2db008616ca661df8df52d35e3fa26f9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">CI2C::Erreur::Erreur </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a>&#160;</td>
-          <td class="paramname"><em>erreur</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">string const &amp;&#160;</td>
-          <td class="paramname"><em>phrase</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructeur de la classe <a class="el" href="class_c_i2_c_1_1_erreur.html" title="Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C...">Erreur</a>. </p>
-<p>Ce constructeur initialise les parametres de la classe.</p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">erreur</td><td>Type d'erreur qui a été levé </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">phrase</td><td>Phrase qui contient un texte sur l'erreur levé </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00060">60</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a8ed19157b6dd1cfe68dba1d4d6fab2d2"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual CI2C::Erreur::~Erreur </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Destructeur de la classe <a class="el" href="class_c_i2_c_1_1_erreur.html" title="Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes CI2C...">Erreur</a>. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a1f9da2c2241b49e5be93bf99438190a1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a> CI2C::Erreur::getTypeErreur </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Methode getTypeErreur. </p>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00082">82</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af38041f60a330ca1603d462c01b118f3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual const char* CI2C::Erreur::what </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Methode what. </p>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00074">74</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation des données membres</h2>
-<a class="anchor" id="a0228754dfbaabca99985b8701fcd92b0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5">TYPE_ERREUR</a> CI2C::Erreur::m_erreur</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Contient le type de l'erreur. </p>
-
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00049">49</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
-
-</div>
-</div>
+<div class="textblock">
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00033">33</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+</div><h2 class="groupheader">Documentation des données membres</h2>
 <a class="anchor" id="ac61872a33babfea899fa3f3feaedaf32"></a>
 <div class="memitem">
 <div class="memproto">
@@ -367,9 +145,29 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Contient une phrase qui correspond à l'erreur. </p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00035">35</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00047">47</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+</div>
+</div>
+<a class="anchor" id="a72fc33a3697019d8261a3a00ac091f9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_c_i2_c_1_1_erreur.html">Erreur</a> (string const&amp; phrase=&quot;Erreur inconnu&quot;) const char* CI2C::Erreur::what() noexcept</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00039">39</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -379,7 +177,7 @@ Attributs privés</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 11:12:02 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

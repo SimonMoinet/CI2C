@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['readbyte',['readByte',['../class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a',1,'CI2C']]],
-  ['readword',['readWord',['../class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a',1,'CI2C']]]
+  ['setslaveaddr',['setSlaveAddr',['../class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc',1,'CI2C']]],
+  ['setupinterface',['setupInterface',['../class_c_i2_c.html#a8fe8755470906582ab854edcbf2a2992',1,'CI2C']]]
 ];

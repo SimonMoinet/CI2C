@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -101,7 +101,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html">Erreur</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette classe permet de levé des exception qui corrspondent aux erreurs de la classes <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>.  <a href="class_c_i2_c_1_1_erreur.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_dev_not_define.html">ErreurDevNotDefine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_open_dev.html">ErreurOpenDev</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html">ErreurRead</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html">ErreurSetAddrSlave</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_slave_not_define.html">ErreurSlaveNotDefine</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_write.html">ErreurWrite</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -152,7 +163,7 @@ Attributs privés</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Cette classe <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a> permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00025">25</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00027">27</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a2df83a2627a8b8bf91460a68372c9ed5"></a>
 <div class="memitem">
@@ -170,7 +181,7 @@ Attributs privés</h2></td></tr>
 <p>Constructeur de la classe <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>. </p>
 <p>Ce constructeur initialise les attributs de la classe. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00004">4</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00009">9</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,7 +200,7 @@ Attributs privés</h2></td></tr>
 
 <p>Destructeur de la classe <a class="el" href="class_c_i2_c.html" title="Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...">CI2C</a>. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00012">12</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00017">17</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,13 +230,14 @@ Attributs privés</h2></td></tr>
 <p>Cette méthode permet de verifier si le dev et l'esclave sont bien défini</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si le dev n'est pas défini, leve une exception de type <a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ae1f10060c3313d98dd2413dee71e18e2" title="echec de la definition du device I2C ">Erreur::TYPE_ERREUR::DEV_DEF</a> </td></tr>
-    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si l'esclave n'est pas défini, leve une exception de type <a class="el" href="class_c_i2_c_1_1_erreur.html#a153281c8e751b72b355d52c548b511d5ad9c45b0127babe676fc8586726b05874" title="echec de la definition de l&#39;adresse de l&#39;esclave ">Erreur::TYPE_ERREUR::SLAVE_DEF</a> </td></tr>
+    <tr><td class="paramname">StringIndexOutOfRangeException</td><td>if index is not between <code>0</code> and <code>length() - 1</code>. </td></tr>
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si le dev n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF </td></tr>
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si l'esclave n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00043">43</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00051">51</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +265,7 @@ Attributs privés</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Un int contenant l'octet du registre lu </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00053">53</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00061">61</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -281,7 +293,7 @@ Attributs privés</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Un int contenant les deux octets du registre lu </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00067">67</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00075">75</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -303,12 +315,19 @@ Attributs privés</h2></td></tr>
 <p>Paramétrage de la nouvelle addresse de l'esclave sur le bus I2C</p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">__u8</td><td>addr_slave : la nouvelle addresse de l'esclave </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">__u8</td><td>addr_slave : la nouvelle addresse de l'esclave</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si le dev n'est pas défini, leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF </td></tr>
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00032">32</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00037">37</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -341,12 +360,19 @@ Attributs privés</h2></td></tr>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">dev</td><td>: le nom de l'interface I2C </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr_slave</td><td>: l'addresse de l'esclave sur le bus I2C </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr_slave</td><td>: l'addresse de l'esclave sur le bus I2C</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si il est impossible de definir le device du bus I2C. Leve une exception de type Erreur::TYPE_ERREUR::DEV_DEF </td></tr>
+    <tr><td class="paramname">Erreur(TYPE_ERREUR</td><td>erreur, string const&amp; phrase) Si la spécification de l'adresse de l'esclave avec lequel on veux communiquer à échoué. Leve une exception de type Erreur::TYPE_ERREUR::SLAVE_DEF </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00017">17</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00022">22</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -385,7 +411,7 @@ Attributs privés</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>true si l'écriture a réussi, false sinon </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00081">81</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00089">89</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -424,7 +450,7 @@ Attributs privés</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>true si l'écriture a réussi, false sinon </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00093">93</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8cpp_source.html#l00101">101</a> du fichier <a class="el" href="_c_i2_c_8cpp_source.html">CI2C.cpp</a>.</p>
 
 </div>
 </div>
@@ -449,7 +475,7 @@ Attributs privés</h2></td></tr>
 
 <p>Contient les informations du bus I2C. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00090">90</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00119">119</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -473,7 +499,7 @@ Attributs privés</h2></td></tr>
 
 <p>Bool qui permet de savoir si le dev est défini. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00092">92</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00121">121</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -497,7 +523,7 @@ Attributs privés</h2></td></tr>
 
 <p>Bool qui permet de savoir sur l'esclave est défini. </p>
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00094">94</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00123">123</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +534,7 @@ Attributs privés</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 11:12:02 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
