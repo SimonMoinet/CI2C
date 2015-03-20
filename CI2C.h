@@ -31,6 +31,7 @@ class CI2C {
 
 		/**
 		 * \class ErreurWrite
+		 * \brief
 		 */
 		class ErreurWrite : public exception {
 			private:
