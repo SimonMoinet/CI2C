@@ -8,7 +8,7 @@ COMP_PATH=Compile
 all : $(SOURCES)
 	$(CC) $(CFLAGS) -c $(SOURCES)
 	mkdir -p $(COMP_PATH)
-	mv $(OBJETS) -t $(COMP_PATH)	
+	mv $(OBJETS) -t $(COMP_PATH)
 
 # AUTRE
 clean :

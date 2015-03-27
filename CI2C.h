@@ -15,6 +15,7 @@ esclaves d'un bus I2C
 
 #ifndef CI2C_H
 #define CI2C_H
+#define I2C_SLAVE 0x0703
 
 #include <fcntl.h> // O_RDWR
 #include <sys/ioctl.h>

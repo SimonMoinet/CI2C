@@ -27,10 +27,7 @@ void CI2C::setupInterface(string dev, __u8 addr_slave)
 
 	isSetDev = true;
 
-	if(ioctl(this->dev, I2C_SLAVE, addr_slave) < 0)
-		throw ErreurSetAddrSlave(static_cast<int>(addr_slave));
-
-	isSetSlave = true;
+	setSlaveAddr(addr_slave);
 }
 
 // Methode setSlaveAddr
