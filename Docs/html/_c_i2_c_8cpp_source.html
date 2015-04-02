@@ -61,6 +61,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -69,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -104,109 +105,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    this-&gt;dev = open(dev.c_str(), O_RDWR);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(this-&gt;dev &lt; 0)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::DEV_DEF, <span class="stringliteral">&quot;ERREUR : Impossible d&#39;ouvrir le bus I2C -&gt; &quot;</span> + dev);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_open_dev.html">ErreurOpenDev</a>(dev);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">isSetDev</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">if</span>(ioctl(this-&gt;dev, I2C_SLAVE, addr_slave) &lt; 0)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::SLAVE_DEF, <span class="stringliteral">&quot;ERREUR : Impossible de definir l&#39;esclave avec lequel on veux communiquer. L&#39;eclave est indisponible ou il n&#39;y a pas d&#39;esclave à l&#39;adresse &quot;</span> + to_string(addr_slave));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">setSlaveAddr</a>(addr_slave);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// Methode setSlaveAddr</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">CI2C::setSlaveAddr</a>(__u8 addr_slave)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">isSetDev</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::DEV_NO_DEF, <span class="stringliteral">&quot;ERREUR : Le device n&#39;est pas défini&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span>(ioctl(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, I2C_SLAVE, addr_slave) &lt; 0)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::SLAVE_DEF, <span class="stringliteral">&quot;ERREUR : Impossible de definir l&#39;esclave avec lequel on veux communiquer. L&#39;eclave est indisponible ou il n&#39;y a pas d&#39;esclave à l&#39;adresse &quot;</span> + to_string(addr_slave));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Methode setSlaveAddr</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">CI2C::setSlaveAddr</a>(__u8 addr_slave)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">isSetDev</a>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_dev_not_define.html">ErreurDevNotDefine</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(ioctl(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, <a class="code" href="_c_i2_c_8h.html#ab15137f7c592d05573de99f078516157">I2C_SLAVE</a>, addr_slave) &lt; 0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_set_addr_slave.html">ErreurSetAddrSlave</a>(static_cast&lt;int&gt;(addr_slave));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">CI2C::isSetInterface</a>()</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">isSetDev</a>)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::DEV_NO_DEF, <span class="stringliteral">&quot;ERREUR : Le device n&#39;est pas défini&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a>)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::SLAVE_NO_DEF, <span class="stringliteral">&quot;ERREUR : L&#39;esclave n&#39;est pas défini&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// Methode readByte</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">   61</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">CI2C::readByte</a>(__u8 reg)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    __s32 res = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();   </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    res = i2c_smbus_read_byte_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>(res &lt; 0)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::READ, <span class="stringliteral">&quot;ERREUR : Impossible de lire la valeur du registre &quot;</span> + to_string(reg));</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">CI2C::isSetInterface</a>()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">isSetDev</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_dev_not_define.html">ErreurDevNotDefine</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_slave_not_define.html">ErreurSlaveNotDefine</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// Methode readByte</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">   58</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">CI2C::readByte</a>(__u8 reg)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    __s32 res = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();   </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    res = i2c_smbus_read_byte_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">if</span>(res &lt; 0)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_read.html">ErreurRead</a>(static_cast&lt;int&gt;(reg));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(res);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(res);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">// Methode readWord</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">CI2C::readWord</a>(__u8 reg)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    __s32 res = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    res = i2c_smbus_read_word_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(res &lt; 0)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::READ, <span class="stringliteral">&quot;ERREUR : Impossible de lire la valeur du registre &quot;</span> + to_string(reg));</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// Methode readWord</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">   72</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">CI2C::readWord</a>(__u8 reg)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    __s32 res = 0;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    res = i2c_smbus_read_word_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">if</span>(res &lt; 0)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_read.html">ErreurRead</a>(static_cast&lt;int&gt;(reg));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(res);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(res);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// Methode writeByte</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">CI2C::writeByte</a>(__u8 reg, __u8 data)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    __s32 error = 0;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    error = i2c_smbus_write_byte_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg, data);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span>(error &lt; 0)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::WRITE, <span class="stringliteral">&quot;ERREUR : Impossible d&#39;écrire la valeur &quot;</span> + to_string(data) + <span class="stringliteral">&quot; dans le registre &quot;</span> + to_string(reg));</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// Methode writeWord</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">  101</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">CI2C::writeWord</a>(__u8 reg, __u16 data)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    __s32 error = 0;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    error = i2c_smbus_write_word_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg, data);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span>(error &lt; 0)</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(Erreur::TYPE_ERREUR::WRITE, <span class="stringliteral">&quot;ERREUR : Impossible d&#39;écrire la valeur &quot;</span> + to_string(data) + <span class="stringliteral">&quot; dans le registre &quot;</span> + to_string(reg));</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// Methode writeByte</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">CI2C::writeByte</a>(__u8 reg, __u8 data)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    __s32 error = 0;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    error = i2c_smbus_write_byte_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg, data);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span>(error &lt; 0)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_write.html">ErreurWrite</a>(static_cast&lt;int&gt;(reg), static_cast&lt;int&gt;(data));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// Methode writeWord</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">   98</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">CI2C::writeWord</a>(__u8 reg, __u16 data)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    __s32 error = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">isSetInterface</a>();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    error = i2c_smbus_write_word_data(this-&gt;<a class="code" href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>, reg, data);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span>(error &lt; 0)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">throw</span> <a class="code" href="class_c_i2_c_1_1_erreur_write.html">ErreurWrite</a>(static_cast&lt;int&gt;(reg), static_cast&lt;int&gt;(data));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="ttc" id="class_c_i2_c_html_ae757710bb84ab327217092f0af851a16"><div class="ttname"><a href="class_c_i2_c.html#ae757710bb84ab327217092f0af851a16">CI2C::~CI2C</a></div><div class="ttdeci">~CI2C()</div><div class="ttdoc">Destructeur de la classe CI2C. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00017">CI2C.cpp:17</a></div></div>
-<div class="ttc" id="class_c_i2_c_1_1_erreur_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur.html">CI2C::Erreur</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00033">CI2C.h:33</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a821adb4a309a1377fef4d1b8487a731e"><div class="ttname"><a href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">CI2C::isSetInterface</a></div><div class="ttdeci">void isSetInterface()</div><div class="ttdoc">Methode isSetInterface. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00051">CI2C.cpp:51</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_ae766fc56ba88f9063e86412fca0c1dfc"><div class="ttname"><a href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">CI2C::setSlaveAddr</a></div><div class="ttdeci">void setSlaveAddr(__u8 addr_slave)</div><div class="ttdoc">Methode setSlaveAddr. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00037">CI2C.cpp:37</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a283d5f6d8371e2abb6532b9e32392f9a"><div class="ttname"><a href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">CI2C::readWord</a></div><div class="ttdeci">int readWord(__u8 reg=0)</div><div class="ttdoc">Methode readWord. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00075">CI2C.cpp:75</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_afb589b9bdefa75257807b4e6ac2c1c5a"><div class="ttname"><a href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">CI2C::readByte</a></div><div class="ttdeci">int readByte(__u8 reg=0)</div><div class="ttdoc">Methode readByte. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00061">CI2C.cpp:61</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a821adb4a309a1377fef4d1b8487a731e"><div class="ttname"><a href="class_c_i2_c.html#a821adb4a309a1377fef4d1b8487a731e">CI2C::isSetInterface</a></div><div class="ttdeci">void isSetInterface()</div><div class="ttdoc">Methode isSetInterface. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00048">CI2C.cpp:48</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_ae766fc56ba88f9063e86412fca0c1dfc"><div class="ttname"><a href="class_c_i2_c.html#ae766fc56ba88f9063e86412fca0c1dfc">CI2C::setSlaveAddr</a></div><div class="ttdeci">void setSlaveAddr(__u8 addr_slave)</div><div class="ttdoc">Methode setSlaveAddr. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00034">CI2C.cpp:34</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a283d5f6d8371e2abb6532b9e32392f9a"><div class="ttname"><a href="class_c_i2_c.html#a283d5f6d8371e2abb6532b9e32392f9a">CI2C::readWord</a></div><div class="ttdeci">int readWord(__u8 reg=0)</div><div class="ttdoc">Methode readWord. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00072">CI2C.cpp:72</a></div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_set_addr_slave_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_set_addr_slave.html">CI2C::ErreurSetAddrSlave</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00108">CI2C.h:108</a></div></div>
+<div class="ttc" id="_c_i2_c_8h_html_ab15137f7c592d05573de99f078516157"><div class="ttname"><a href="_c_i2_c_8h.html#ab15137f7c592d05573de99f078516157">I2C_SLAVE</a></div><div class="ttdeci">#define I2C_SLAVE</div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00015">CI2C.h:15</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_afb589b9bdefa75257807b4e6ac2c1c5a"><div class="ttname"><a href="class_c_i2_c.html#afb589b9bdefa75257807b4e6ac2c1c5a">CI2C::readByte</a></div><div class="ttdeci">int readByte(__u8 reg=0)</div><div class="ttdoc">Methode readByte. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00058">CI2C.cpp:58</a></div></div>
 <div class="ttc" id="class_c_i2_c_html_a2df83a2627a8b8bf91460a68372c9ed5"><div class="ttname"><a href="class_c_i2_c.html#a2df83a2627a8b8bf91460a68372c9ed5">CI2C::CI2C</a></div><div class="ttdeci">CI2C()</div><div class="ttdoc">Constructeur de la classe CI2C. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00009">CI2C.cpp:9</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_ae2d4648eadc2acae86a49cecbf39ce56"><div class="ttname"><a href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">CI2C::dev</a></div><div class="ttdeci">int dev</div><div class="ttdoc">Contient les informations du bus I2C. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00119">CI2C.h:119</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a26517fc7e3a282863ff09e7a792f4386"><div class="ttname"><a href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">CI2C::writeByte</a></div><div class="ttdeci">void writeByte(__u8 reg, __u8 data)</div><div class="ttdoc">Methode writeByte. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00089">CI2C.cpp:89</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a892d111f995589334497f2b573ab436d"><div class="ttname"><a href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">CI2C::isSetDev</a></div><div class="ttdeci">bool isSetDev</div><div class="ttdoc">Bool qui permet de savoir si le dev est défini. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00121">CI2C.h:121</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a14250174d9281db1bc1db2360cacee40"><div class="ttname"><a href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">CI2C::writeWord</a></div><div class="ttdeci">void writeWord(__u8 reg, __u16 data)</div><div class="ttdoc">Methode writeWord. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00101">CI2C.cpp:101</a></div></div>
-<div class="ttc" id="class_c_i2_c_html_a19200c12efe17b560256641cce4f5909"><div class="ttname"><a href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">CI2C::isSetSlave</a></div><div class="ttdeci">bool isSetSlave</div><div class="ttdoc">Bool qui permet de savoir sur l&#39;esclave est défini. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00123">CI2C.h:123</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_ae2d4648eadc2acae86a49cecbf39ce56"><div class="ttname"><a href="class_c_i2_c.html#ae2d4648eadc2acae86a49cecbf39ce56">CI2C::dev</a></div><div class="ttdeci">int dev</div><div class="ttdoc">Contient les informations du bus I2C. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00137">CI2C.h:137</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a26517fc7e3a282863ff09e7a792f4386"><div class="ttname"><a href="class_c_i2_c.html#a26517fc7e3a282863ff09e7a792f4386">CI2C::writeByte</a></div><div class="ttdeci">void writeByte(__u8 reg, __u8 data)</div><div class="ttdoc">Methode writeByte. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00086">CI2C.cpp:86</a></div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_write_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_write.html">CI2C::ErreurWrite</a></div><div class="ttdoc">Cette classe est une esception qui est levé lorsqu&#39;il y a une erreur d&#39;écriture. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00038">CI2C.h:38</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a892d111f995589334497f2b573ab436d"><div class="ttname"><a href="class_c_i2_c.html#a892d111f995589334497f2b573ab436d">CI2C::isSetDev</a></div><div class="ttdeci">bool isSetDev</div><div class="ttdoc">Bool qui permet de savoir si le dev est défini. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00139">CI2C.h:139</a></div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_open_dev_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_open_dev.html">CI2C::ErreurOpenDev</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00096">CI2C.h:96</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a14250174d9281db1bc1db2360cacee40"><div class="ttname"><a href="class_c_i2_c.html#a14250174d9281db1bc1db2360cacee40">CI2C::writeWord</a></div><div class="ttdeci">void writeWord(__u8 reg, __u16 data)</div><div class="ttdoc">Methode writeWord. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00098">CI2C.cpp:98</a></div></div>
+<div class="ttc" id="class_c_i2_c_html_a19200c12efe17b560256641cce4f5909"><div class="ttname"><a href="class_c_i2_c.html#a19200c12efe17b560256641cce4f5909">CI2C::isSetSlave</a></div><div class="ttdeci">bool isSetSlave</div><div class="ttdoc">Bool qui permet de savoir sur l&#39;esclave est défini. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00141">CI2C.h:141</a></div></div>
 <div class="ttc" id="class_c_i2_c_html_a8fe8755470906582ab854edcbf2a2992"><div class="ttname"><a href="class_c_i2_c.html#a8fe8755470906582ab854edcbf2a2992">CI2C::setupInterface</a></div><div class="ttdeci">void setupInterface(string dev, __u8 addr_slave)</div><div class="ttdoc">Methode setupInterface. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8cpp_source.html#l00022">CI2C.cpp:22</a></div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_dev_not_define_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_dev_not_define.html">CI2C::ErreurDevNotDefine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00121">CI2C.h:121</a></div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_read_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_read.html">CI2C::ErreurRead</a></div><div class="ttdoc">Cette classe est une exception qui est levé lorsqu&#39;il y a un erreur de lecture. </div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00070">CI2C.h:70</a></div></div>
 <div class="ttc" id="_c_i2_c_8h_html"><div class="ttname"><a href="_c_i2_c_8h.html">CI2C.h</a></div><div class="ttdoc">Contient la declaration de la CI2C. </div></div>
+<div class="ttc" id="class_c_i2_c_1_1_erreur_slave_not_define_html"><div class="ttname"><a href="class_c_i2_c_1_1_erreur_slave_not_define.html">CI2C::ErreurSlaveNotDefine</a></div><div class="ttdef"><b>Definition:</b> <a href="_c_i2_c_8h_source.html#l00128">CI2C.h:128</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Mars 2015 11:27:32 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

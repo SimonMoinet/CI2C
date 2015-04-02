@@ -1,0 +1,56 @@
+\hypertarget{CI2C_8h}{\section{Référence du fichier /home/jam/\+Bureau/\+C++/\+Classes/\+C\+I2\+C/\+C\+I2\+C.h}
+\label{CI2C_8h}\index{/home/jam/\+Bureau/\+C++/\+Classes/\+C\+I2\+C/\+C\+I2\+C.\+h@{/home/jam/\+Bureau/\+C++/\+Classes/\+C\+I2\+C/\+C\+I2\+C.\+h}}
+}
+
+
+Contient la declaration de la \hyperlink{classCI2C}{C\+I2\+C}.  
+
+
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\\*
+{\ttfamily \#include $<$linux/i2c-\/dev.\+h$>$}\\*
+{\ttfamily \#include $<$exception$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+Graphe des dépendances par inclusion de C\+I2\+C.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CI2C_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{CI2C_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCI2C}{C\+I2\+C}
+\begin{DoxyCompactList}\small\item\em Cette classe \hyperlink{classCI2C}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C. \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurWrite}{C\+I2\+C\+::\+Erreur\+Write}
+\begin{DoxyCompactList}\small\item\em Cette classe est une esception qui est levé lorsqu'il y a une erreur d'écriture. \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurRead}{C\+I2\+C\+::\+Erreur\+Read}
+\begin{DoxyCompactList}\small\item\em Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture. \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurOpenDev}{C\+I2\+C\+::\+Erreur\+Open\+Dev}
+\begin{DoxyCompactList}\small\item\em exception lorsqu'on essaye d'ouvrir le dev spécifié \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurSetAddrSlave}{C\+I2\+C\+::\+Erreur\+Set\+Addr\+Slave}
+\begin{DoxyCompactList}\small\item\em exception definition de l'esclave \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurDevNotDefine}{C\+I2\+C\+::\+Erreur\+Dev\+Not\+Define}
+\begin{DoxyCompactList}\small\item\em exception device non défini \end{DoxyCompactList}\item 
+class \hyperlink{classCI2C_1_1ErreurSlaveNotDefine}{C\+I2\+C\+::\+Erreur\+Slave\+Not\+Define}
+\begin{DoxyCompactList}\small\item\em exception adresse de l'esclave non défini \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{CI2C_8h_ab15137f7c592d05573de99f078516157}{\#define {\bfseries I2\+C\+\_\+\+S\+L\+A\+V\+E}~0x0703}\label{CI2C_8h_ab15137f7c592d05573de99f078516157}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Contient la declaration de la \hyperlink{classCI2C}{C\+I2\+C}. 
+

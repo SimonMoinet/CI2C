@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ci2c',['CI2C',['../class_c_i2_c.html',1,'']]]
+  ['ci2c',['CI2C',['../classCI2C.html',1,'']]]
 ];

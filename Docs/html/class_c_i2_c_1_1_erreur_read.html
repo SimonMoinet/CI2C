@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -95,45 +95,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </div><!--header-->
 <div class="contents">
 
+<p>Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture.  
+ <a href="class_c_i2_c_1_1_erreur_read.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de CI2C::ErreurRead:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur_read__inherit__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_read_inherit__map" alt="Inheritance graph"/></div>
 <map name="_c_i2_c_1_1_erreur_read_inherit__map" id="_c_i2_c_1_1_erreur_read_inherit__map">
-<area shape="rect" id="node2" href="class_c_i2_c_1_1_erreur.html" title="CI2C::Erreur" alt="" coords="21,80,117,107"/></map>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de CI2C::ErreurRead:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur_read__coll__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_read_coll__map" alt="Collaboration graph"/></div>
 <map name="_c_i2_c_1_1_erreur_read_coll__map" id="_c_i2_c_1_1_erreur_read_coll__map">
-<area shape="rect" id="node2" href="class_c_i2_c_1_1_erreur.html" title="CI2C::Erreur" alt="" coords="21,81,117,108"/></map>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2006046ac1989f7d8f36e73365a7430d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html#a2006046ac1989f7d8f36e73365a7430d">ErreurRead</a> (int reg)</td></tr>
+<tr class="memdesc:a2006046ac1989f7d8f36e73365a7430d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contient le registre que l'on a essayé de lire.  <a href="#a2006046ac1989f7d8f36e73365a7430d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2006046ac1989f7d8f36e73365a7430d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac951490ae32fa86282a790723611b8"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html#a7ac951490ae32fa86282a790723611b8">what</a> () noexcept</td></tr>
-<tr class="separator:a7ac951490ae32fa86282a790723611b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43289e1f3f662de4ee81036a98b2ed55"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html#a43289e1f3f662de4ee81036a98b2ed55">what</a> () const noexcept</td></tr>
+<tr class="memdesc:a43289e1f3f662de4ee81036a98b2ed55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methode what.  <a href="#a43289e1f3f662de4ee81036a98b2ed55">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a43289e1f3f662de4ee81036a98b2ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a8af2c5a4b9b952aa97537fd2c59745a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_read.html#a8af2c5a4b9b952aa97537fd2c59745a5">m_reg</a></td></tr>
 <tr class="separator:a8af2c5a4b9b952aa97537fd2c59745a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Membres hérités additionnels</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_c_i2_c_1_1_erreur"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_c_i2_c_1_1_erreur')"><img src="closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="class_c_i2_c_1_1_erreur.html">CI2C::Erreur</a></td></tr>
-<tr class="memitem:a72fc33a3697019d8261a3a00ac091f9f inherit pub_attribs_class_c_i2_c_1_1_erreur"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(string const <br class="typebreak" />
-&amp;phrase=&quot;Erreur inconnu&quot;) <br class="typebreak" />
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a72fc33a3697019d8261a3a00ac091f9f">what</a> () noexcept</td></tr>
-<tr class="separator:a72fc33a3697019d8261a3a00ac091f9f inherit pub_attribs_class_c_i2_c_1_1_erreur"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
-<div class="textblock">
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00061">61</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<div class="textblock"><p>Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture. </p>
+
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00070">70</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a2006046ac1989f7d8f36e73365a7430d"></a>
 <div class="memitem">
@@ -157,12 +155,22 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00066">66</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Contient le registre que l'on a essayé de lire. </p>
+<p>Constructeur de la classe <a class="el" href="class_c_i2_c_1_1_erreur_read.html" title="Cette classe est une exception qui est levé lorsqu&#39;il y a un erreur de lecture. ">ErreurRead</a></p>
+<p>Ce contructeur initialise les attributs de la classe <a class="el" href="class_c_i2_c_1_1_erreur_write.html" title="Cette classe est une esception qui est levé lorsqu&#39;il y a une erreur d&#39;écriture. ">ErreurWrite</a></p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>: le registre que l'on a essayé de lire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00082">82</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a7ac951490ae32fa86282a790723611b8"></a>
+<a class="anchor" id="a43289e1f3f662de4ee81036a98b2ed55"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -173,7 +181,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td class="memname">virtual const char* CI2C::ErreurRead::what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -183,7 +191,10 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00067">67</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Methode what. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>la description de l'esception avec la valeur du registre que l'on a essayé de lire </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00089">89</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -206,7 +217,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00063">63</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00072">72</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +227,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Mars 2015 11:27:33 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -1,9 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$class_c_i2_c_1_1_erreur.html" title="CI2C::Erreur" alt="" coords="132,132,228,159"/>
-<area shape="rect" id="node3" href="$class_c_i2_c_1_1_erreur_dev_not_define.html" title="CI2C::ErreurDevNotDefine" alt="" coords="281,5,459,32"/>
-<area shape="rect" id="node4" href="$class_c_i2_c_1_1_erreur_open_dev.html" title="CI2C::ErreurOpenDev" alt="" coords="295,56,445,83"/>
-<area shape="rect" id="node5" href="$class_c_i2_c_1_1_erreur_read.html" title="CI2C::ErreurRead" alt="" coords="307,107,433,133"/>
-<area shape="rect" id="node6" href="$class_c_i2_c_1_1_erreur_set_addr_slave.html" title="CI2C::ErreurSetAddrSlave" alt="" coords="282,157,458,184"/>
-<area shape="rect" id="node7" href="$class_c_i2_c_1_1_erreur_slave_not_define.html" title="CI2C::ErreurSlaveNotDefine" alt="" coords="276,208,464,235"/>
-<area shape="rect" id="node8" href="$class_c_i2_c_1_1_erreur_write.html" title="CI2C::ErreurWrite" alt="" coords="307,259,433,285"/>
+<area shape="rect" id="node1" title="STL class. " alt="" coords="5,132,109,159"/>
+<area shape="rect" id="node2" href="$classCI2C_1_1ErreurDevNotDefine.html" title="exception device non défini " alt="" coords="162,5,341,32"/>
+<area shape="rect" id="node3" href="$classCI2C_1_1ErreurOpenDev.html" title="exception lorsqu&#39;on essaye d&#39;ouvrir le dev spécifié " alt="" coords="176,56,327,83"/>
+<area shape="rect" id="node4" href="$classCI2C_1_1ErreurRead.html" title="Cette classe est une exception qui est levé lorsqu&#39;il y a un erreur de lecture. " alt="" coords="188,107,315,133"/>
+<area shape="rect" id="node5" href="$classCI2C_1_1ErreurSetAddrSlave.html" title="exception definition de l&#39;esclave " alt="" coords="163,157,339,184"/>
+<area shape="rect" id="node6" href="$classCI2C_1_1ErreurSlaveNotDefine.html" title="exception adresse de l&#39;esclave non défini " alt="" coords="157,208,345,235"/>
+<area shape="rect" id="node7" href="$classCI2C_1_1ErreurWrite.html" title="Cette classe est une esception qui est levé lorsqu&#39;il y a une erreur d&#39;écriture. " alt="" coords="188,259,315,285"/>
 </map>

@@ -13,20 +13,18 @@ Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeu
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{class_c_i2_c_1_1_erreur}{Erreur}
-\item 
 class \hyperlink{class_c_i2_c_1_1_erreur_dev_not_define}{Erreur\+Dev\+Not\+Define}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_open_dev}{Erreur\+Open\+Dev}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_read}{Erreur\+Read}
-\item 
+\begin{DoxyCompactList}\small\item\em Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture. \end{DoxyCompactList}\item 
 class \hyperlink{class_c_i2_c_1_1_erreur_set_addr_slave}{Erreur\+Set\+Addr\+Slave}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_slave_not_define}{Erreur\+Slave\+Not\+Define}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_write}{Erreur\+Write}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Cette classe est une esception qui est levé lorsqu'il y a une erreur d'écriture. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,7 +63,7 @@ bool \hyperlink{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{is\+Set\+Slave}
 \subsection{Description détaillée}
 Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C. 
 
-Définition à la ligne 27 du fichier C\+I2\+C.\+h.
+Définition à la ligne 30 du fichier C\+I2\+C.\+h.
 
 
 
@@ -127,7 +125,7 @@ Cette méthode permet de verifier si le dev et l'esclave sont bien défini
 \end{DoxyExceptions}
 
 
-Définition à la ligne 51 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 48 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_afb589b9bdefa75257807b4e6ac2c1c5a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Byte@{read\+Byte}}
 \index{read\+Byte@{read\+Byte}!C\+I2\+C@{C\+I2\+C}}
@@ -152,7 +150,7 @@ Un int contenant l'octet du registre lu
 \end{DoxyReturn}
 
 
-Définition à la ligne 61 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 58 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a283d5f6d8371e2abb6532b9e32392f9a}{\index{C\+I2\+C@{C\+I2\+C}!read\+Word@{read\+Word}}
 \index{read\+Word@{read\+Word}!C\+I2\+C@{C\+I2\+C}}
@@ -177,7 +175,7 @@ Un int contenant les deux octets du registre lu
 \end{DoxyReturn}
 
 
-Définition à la ligne 75 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 72 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_ae766fc56ba88f9063e86412fca0c1dfc}{\index{C\+I2\+C@{C\+I2\+C}!set\+Slave\+Addr@{set\+Slave\+Addr}}
 \index{set\+Slave\+Addr@{set\+Slave\+Addr}!C\+I2\+C@{C\+I2\+C}}
@@ -206,7 +204,7 @@ Paramétrage de la nouvelle addresse de l'esclave sur le bus I2\+C
 \end{DoxyExceptions}
 
 
-Définition à la ligne 37 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 34 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a8fe8755470906582ab854edcbf2a2992}{\index{C\+I2\+C@{C\+I2\+C}!setup\+Interface@{setup\+Interface}}
 \index{setup\+Interface@{setup\+Interface}!C\+I2\+C@{C\+I2\+C}}
@@ -266,7 +264,7 @@ true si l'écriture a réussi, false sinon
 \end{DoxyReturn}
 
 
-Définition à la ligne 89 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 86 du fichier C\+I2\+C.\+cpp.
 
 \hypertarget{class_c_i2_c_a14250174d9281db1bc1db2360cacee40}{\index{C\+I2\+C@{C\+I2\+C}!write\+Word@{write\+Word}}
 \index{write\+Word@{write\+Word}!C\+I2\+C@{C\+I2\+C}}
@@ -294,7 +292,7 @@ true si l'écriture a réussi, false sinon
 \end{DoxyReturn}
 
 
-Définition à la ligne 101 du fichier C\+I2\+C.\+cpp.
+Définition à la ligne 98 du fichier C\+I2\+C.\+cpp.
 
 
 
@@ -308,7 +306,7 @@ Contient les informations du bus I2\+C.
 
 
 
-Définition à la ligne 119 du fichier C\+I2\+C.\+h.
+Définition à la ligne 137 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a892d111f995589334497f2b573ab436d}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Dev@{is\+Set\+Dev}}
 \index{is\+Set\+Dev@{is\+Set\+Dev}!C\+I2\+C@{C\+I2\+C}}
@@ -319,7 +317,7 @@ Bool qui permet de savoir si le dev est défini.
 
 
 
-Définition à la ligne 121 du fichier C\+I2\+C.\+h.
+Définition à la ligne 139 du fichier C\+I2\+C.\+h.
 
 \hypertarget{class_c_i2_c_a19200c12efe17b560256641cce4f5909}{\index{C\+I2\+C@{C\+I2\+C}!is\+Set\+Slave@{is\+Set\+Slave}}
 \index{is\+Set\+Slave@{is\+Set\+Slave}!C\+I2\+C@{C\+I2\+C}}
@@ -330,7 +328,7 @@ Bool qui permet de savoir sur l'esclave est défini.
 
 
 
-Définition à la ligne 123 du fichier C\+I2\+C.\+h.
+Définition à la ligne 141 du fichier C\+I2\+C.\+h.
 
 
 

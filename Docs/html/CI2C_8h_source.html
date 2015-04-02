@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>CRTC:  Fichier source de /home/jam/Bureau/C++/Classes/CI2C/CI2C.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CRTC
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/jam/Bureau/C++/Classes/CI2C/CI2C.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="CI2C_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef CI2C_H</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define CI2C_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define I2C_SLAVE 0x0703</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span> <span class="comment">// O_RDWR</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;sys/ioctl.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;linux/i2c-dev.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;exception&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classCI2C.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classCI2C.html">CI2C</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurWrite.html">   38</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurWrite.html">ErreurWrite</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurWrite.html#a0271678b0343dd18ad8113ab3dd579d2">   41</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classCI2C_1_1ErreurWrite.html#a0271678b0343dd18ad8113ab3dd579d2">m_reg</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurWrite.html#a3ba1d239d00892177274b494e987862b">   43</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classCI2C_1_1ErreurWrite.html#a3ba1d239d00892177274b494e987862b">m_data</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurWrite.html#a8d3b2f6b46d6bb5e4b26e5fdce8e80b4">   54</a></span>&#160;                <a class="code" href="classCI2C_1_1ErreurWrite.html#a8d3b2f6b46d6bb5e4b26e5fdce8e80b4">ErreurWrite</a>(<span class="keywordtype">int</span> reg, <span class="keywordtype">int</span> data):m_reg(reg), m_data(data) {};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurWrite.html#ad76aa069d233146923c4a244d2da9665">   60</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurWrite.html#ad76aa069d233146923c4a244d2da9665">what</a>() const noexcept {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    stringstream temp;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    temp &lt;&lt; <span class="stringliteral">&quot;Erreur d&#39;écriture de la valeur 0x&quot;</span> &lt;&lt; hex &lt;&lt; m_data &lt;&lt; <span class="stringliteral">&quot; dans le registre 0x&quot;</span> &lt;&lt; m_reg;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">return</span> temp.str().c_str();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                };</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurRead.html">   71</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurRead.html">ErreurRead</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurRead.html#a8af2c5a4b9b952aa97537fd2c59745a5">   74</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classCI2C_1_1ErreurRead.html#a8af2c5a4b9b952aa97537fd2c59745a5">m_reg</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurRead.html#a2006046ac1989f7d8f36e73365a7430d">   84</a></span>&#160;                <a class="code" href="classCI2C_1_1ErreurRead.html#a2006046ac1989f7d8f36e73365a7430d">ErreurRead</a>(<span class="keywordtype">int</span> reg):m_reg(reg) {};</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurRead.html#a43289e1f3f662de4ee81036a98b2ed55">   91</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurRead.html#a43289e1f3f662de4ee81036a98b2ed55">what</a>() const noexcept {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    stringstream temp;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    temp &lt;&lt; <span class="stringliteral">&quot;Erreur de lecture du registre 0x&quot;</span> &lt;&lt; hex &lt;&lt; m_reg;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    <span class="keywordflow">return</span> temp.str().c_str();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                };</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        };</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurOpenDev.html">  102</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurOpenDev.html">ErreurOpenDev</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurOpenDev.html#a19fcf1034384789940c900e32953e857">  105</a></span>&#160;                <span class="keywordtype">string</span> <a class="code" href="classCI2C_1_1ErreurOpenDev.html#a19fcf1034384789940c900e32953e857">m_devName</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurOpenDev.html#ac741480179a06b9d23f4c5c49500a5e1">  115</a></span>&#160;                <a class="code" href="classCI2C_1_1ErreurOpenDev.html#ac741480179a06b9d23f4c5c49500a5e1">ErreurOpenDev</a>(<span class="keywordtype">string</span> devName):m_devName(devName) {};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurOpenDev.html#a52441e7b0de2a74dd51c67504bb93fe1">  121</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurOpenDev.html#a52441e7b0de2a74dd51c67504bb93fe1">what</a>() const noexcept {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <span class="keywordtype">string</span> temp = <span class="stringliteral">&quot;Impossible d&#39;ouvrir le bus i2c : &quot;</span> + m_devName;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <span class="keywordflow">return</span> temp.c_str();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                };</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSetAddrSlave.html">  131</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurSetAddrSlave.html">ErreurSetAddrSlave</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSetAddrSlave.html#aebf96cc2020fd45215280d41648151d8">  134</a></span>&#160;                <span class="keywordtype">int</span> <a class="code" href="classCI2C_1_1ErreurSetAddrSlave.html#aebf96cc2020fd45215280d41648151d8">m_addr</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSetAddrSlave.html#ac92f34eb7c68e1b29ae55e0b147bdc02">  144</a></span>&#160;                <a class="code" href="classCI2C_1_1ErreurSetAddrSlave.html#ac92f34eb7c68e1b29ae55e0b147bdc02">ErreurSetAddrSlave</a>(<span class="keywordtype">int</span> addr):m_addr(addr) {};</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSetAddrSlave.html#a6f82e7fa42f2ea5bb39d9c06517c5b09">  150</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurSetAddrSlave.html#a6f82e7fa42f2ea5bb39d9c06517c5b09">what</a>() const noexcept {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    stringstream temp;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    temp &lt;&lt; <span class="stringliteral">&quot;Impossible de definir l&#39;esclave avec lequel on veux communiquer. L&#39;eclave est indisponible ou il n&#39;y a pas d&#39;esclave à l&#39;adresse &quot;</span> &lt;&lt; hex &lt;&lt; m_addr;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    <span class="keywordflow">return</span> temp.str().c_str();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                };</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        };</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurDevNotDefine.html">  161</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurDevNotDefine.html">ErreurDevNotDefine</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurDevNotDefine.html#a8c2f805ea7adc632db53c58437c2884e">  167</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurDevNotDefine.html#a8c2f805ea7adc632db53c58437c2884e">what</a>() const noexcept {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Erreur, le device I2C n&#39;est pas défini&quot;</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                };</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        };</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSlaveNotDefine.html">  176</a></span>&#160;        <span class="keyword">class </span><a class="code" href="classCI2C_1_1ErreurSlaveNotDefine.html">ErreurSlaveNotDefine</a> : <span class="keyword">public</span> exception {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="classCI2C_1_1ErreurSlaveNotDefine.html#a7efd5525f6598a091e21519cfcc3cd95">  182</a></span>&#160;                <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCI2C_1_1ErreurSlaveNotDefine.html#a7efd5525f6598a091e21519cfcc3cd95">what</a>() const noexcept {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Erreur, L&#39;esclave n&#39;est pas défini&quot;</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                };</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        };</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classCI2C.html#ae2d4648eadc2acae86a49cecbf39ce56">  189</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classCI2C.html#ae2d4648eadc2acae86a49cecbf39ce56">dev</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classCI2C.html#a892d111f995589334497f2b573ab436d">  191</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classCI2C.html#a892d111f995589334497f2b573ab436d">isSetDev</a>; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classCI2C.html#a19200c12efe17b560256641cce4f5909">  193</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classCI2C.html#a19200c12efe17b560256641cce4f5909">isSetSlave</a>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordtype">void</span> isSetInterface();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="classCI2C.html">CI2C</a>();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        ~<a class="code" href="classCI2C.html">CI2C</a>();</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordtype">void</span> setupInterface(<span class="keywordtype">string</span> dev, __u8 addr_slave);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">void</span> setSlaveAddr(__u8 addr_slave);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">int</span> readByte(__u8 reg = 0);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordtype">int</span> readWord(__u8 reg = 0);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordtype">void</span> writeByte(__u8 reg, __u8 data);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordtype">void</span> writeWord(__u8 reg, __u16 data);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;};</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;<span class="preprocessor">#endif // CI2C_H</span></div>
+<div class="ttc" id="classCI2C_1_1ErreurOpenDev_html_a19fcf1034384789940c900e32953e857"><div class="ttname"><a href="classCI2C_1_1ErreurOpenDev.html#a19fcf1034384789940c900e32953e857">CI2C::ErreurOpenDev::m_devName</a></div><div class="ttdeci">string m_devName</div><div class="ttdoc">contient le nom du device que l&#39;on essaye d&#39;ouvrir </div><div class="ttdef"><b>Definition:</b> CI2C.h:105</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurRead_html_a43289e1f3f662de4ee81036a98b2ed55"><div class="ttname"><a href="classCI2C_1_1ErreurRead.html#a43289e1f3f662de4ee81036a98b2ed55">CI2C::ErreurRead::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:91</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurOpenDev_html_a52441e7b0de2a74dd51c67504bb93fe1"><div class="ttname"><a href="classCI2C_1_1ErreurOpenDev.html#a52441e7b0de2a74dd51c67504bb93fe1">CI2C::ErreurOpenDev::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:121</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurWrite_html_ad76aa069d233146923c4a244d2da9665"><div class="ttname"><a href="classCI2C_1_1ErreurWrite.html#ad76aa069d233146923c4a244d2da9665">CI2C::ErreurWrite::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:60</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurDevNotDefine_html_a8c2f805ea7adc632db53c58437c2884e"><div class="ttname"><a href="classCI2C_1_1ErreurDevNotDefine.html#a8c2f805ea7adc632db53c58437c2884e">CI2C::ErreurDevNotDefine::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:167</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurRead_html_a2006046ac1989f7d8f36e73365a7430d"><div class="ttname"><a href="classCI2C_1_1ErreurRead.html#a2006046ac1989f7d8f36e73365a7430d">CI2C::ErreurRead::ErreurRead</a></div><div class="ttdeci">ErreurRead(int reg)</div><div class="ttdoc">Constructeur de la classe ErreurRead. </div><div class="ttdef"><b>Definition:</b> CI2C.h:84</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
+<div class="ttc" id="classCI2C_html_a19200c12efe17b560256641cce4f5909"><div class="ttname"><a href="classCI2C.html#a19200c12efe17b560256641cce4f5909">CI2C::isSetSlave</a></div><div class="ttdeci">bool isSetSlave</div><div class="ttdoc">Bool qui permet de savoir sur l&#39;esclave est défini. </div><div class="ttdef"><b>Definition:</b> CI2C.h:193</div></div>
+<div class="ttc" id="classCI2C_html_a892d111f995589334497f2b573ab436d"><div class="ttname"><a href="classCI2C.html#a892d111f995589334497f2b573ab436d">CI2C::isSetDev</a></div><div class="ttdeci">bool isSetDev</div><div class="ttdoc">Bool qui permet de savoir si le dev est défini. </div><div class="ttdef"><b>Definition:</b> CI2C.h:191</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurRead_html"><div class="ttname"><a href="classCI2C_1_1ErreurRead.html">CI2C::ErreurRead</a></div><div class="ttdoc">Cette classe est une exception qui est levé lorsqu&#39;il y a un erreur de lecture. </div><div class="ttdef"><b>Definition:</b> CI2C.h:71</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSlaveNotDefine_html"><div class="ttname"><a href="classCI2C_1_1ErreurSlaveNotDefine.html">CI2C::ErreurSlaveNotDefine</a></div><div class="ttdoc">exception adresse de l&#39;esclave non défini </div><div class="ttdef"><b>Definition:</b> CI2C.h:176</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSlaveNotDefine_html_a7efd5525f6598a091e21519cfcc3cd95"><div class="ttname"><a href="classCI2C_1_1ErreurSlaveNotDefine.html#a7efd5525f6598a091e21519cfcc3cd95">CI2C::ErreurSlaveNotDefine::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:182</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurWrite_html"><div class="ttname"><a href="classCI2C_1_1ErreurWrite.html">CI2C::ErreurWrite</a></div><div class="ttdoc">Cette classe est une esception qui est levé lorsqu&#39;il y a une erreur d&#39;écriture. </div><div class="ttdef"><b>Definition:</b> CI2C.h:38</div></div>
+<div class="ttc" id="classCI2C_html_ae2d4648eadc2acae86a49cecbf39ce56"><div class="ttname"><a href="classCI2C.html#ae2d4648eadc2acae86a49cecbf39ce56">CI2C::dev</a></div><div class="ttdeci">int dev</div><div class="ttdoc">Contient les informations du bus I2C. </div><div class="ttdef"><b>Definition:</b> CI2C.h:189</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurRead_html_a8af2c5a4b9b952aa97537fd2c59745a5"><div class="ttname"><a href="classCI2C_1_1ErreurRead.html#a8af2c5a4b9b952aa97537fd2c59745a5">CI2C::ErreurRead::m_reg</a></div><div class="ttdeci">int m_reg</div><div class="ttdoc">Contient le registre que l&#39;on a essayé de lire. </div><div class="ttdef"><b>Definition:</b> CI2C.h:74</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurWrite_html_a8d3b2f6b46d6bb5e4b26e5fdce8e80b4"><div class="ttname"><a href="classCI2C_1_1ErreurWrite.html#a8d3b2f6b46d6bb5e4b26e5fdce8e80b4">CI2C::ErreurWrite::ErreurWrite</a></div><div class="ttdeci">ErreurWrite(int reg, int data)</div><div class="ttdoc">Constructeur de la classe ErreurWrite. </div><div class="ttdef"><b>Definition:</b> CI2C.h:54</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSetAddrSlave_html_aebf96cc2020fd45215280d41648151d8"><div class="ttname"><a href="classCI2C_1_1ErreurSetAddrSlave.html#aebf96cc2020fd45215280d41648151d8">CI2C::ErreurSetAddrSlave::m_addr</a></div><div class="ttdeci">int m_addr</div><div class="ttdoc">Contient l&#39;addresse de l&#39;esclave avec lequel on veux communiquer. </div><div class="ttdef"><b>Definition:</b> CI2C.h:134</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurOpenDev_html"><div class="ttname"><a href="classCI2C_1_1ErreurOpenDev.html">CI2C::ErreurOpenDev</a></div><div class="ttdoc">exception lorsqu&#39;on essaye d&#39;ouvrir le dev spécifié </div><div class="ttdef"><b>Definition:</b> CI2C.h:102</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSetAddrSlave_html_a6f82e7fa42f2ea5bb39d9c06517c5b09"><div class="ttname"><a href="classCI2C_1_1ErreurSetAddrSlave.html#a6f82e7fa42f2ea5bb39d9c06517c5b09">CI2C::ErreurSetAddrSlave::what</a></div><div class="ttdeci">virtual const char * what() const noexcept</div><div class="ttdoc">Methode what. </div><div class="ttdef"><b>Definition:</b> CI2C.h:150</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurOpenDev_html_ac741480179a06b9d23f4c5c49500a5e1"><div class="ttname"><a href="classCI2C_1_1ErreurOpenDev.html#ac741480179a06b9d23f4c5c49500a5e1">CI2C::ErreurOpenDev::ErreurOpenDev</a></div><div class="ttdeci">ErreurOpenDev(string devName)</div><div class="ttdoc">Contructeur de la classe ErreurOpenDev. </div><div class="ttdef"><b>Definition:</b> CI2C.h:115</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSetAddrSlave_html"><div class="ttname"><a href="classCI2C_1_1ErreurSetAddrSlave.html">CI2C::ErreurSetAddrSlave</a></div><div class="ttdoc">exception definition de l&#39;esclave </div><div class="ttdef"><b>Definition:</b> CI2C.h:131</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurWrite_html_a3ba1d239d00892177274b494e987862b"><div class="ttname"><a href="classCI2C_1_1ErreurWrite.html#a3ba1d239d00892177274b494e987862b">CI2C::ErreurWrite::m_data</a></div><div class="ttdeci">int m_data</div><div class="ttdoc">Contient la valeur qu&#39;on a essayer d&#39;écrire dans le registre. </div><div class="ttdef"><b>Definition:</b> CI2C.h:43</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurWrite_html_a0271678b0343dd18ad8113ab3dd579d2"><div class="ttname"><a href="classCI2C_1_1ErreurWrite.html#a0271678b0343dd18ad8113ab3dd579d2">CI2C::ErreurWrite::m_reg</a></div><div class="ttdeci">int m_reg</div><div class="ttdoc">Contient le registre dans lequel on a essayé d&#39;écrire. </div><div class="ttdef"><b>Definition:</b> CI2C.h:41</div></div>
+<div class="ttc" id="classCI2C_html"><div class="ttname"><a href="classCI2C.html">CI2C</a></div><div class="ttdoc">Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d&#39;un bus I2C...</div><div class="ttdef"><b>Definition:</b> CI2C.h:30</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurSetAddrSlave_html_ac92f34eb7c68e1b29ae55e0b147bdc02"><div class="ttname"><a href="classCI2C_1_1ErreurSetAddrSlave.html#ac92f34eb7c68e1b29ae55e0b147bdc02">CI2C::ErreurSetAddrSlave::ErreurSetAddrSlave</a></div><div class="ttdeci">ErreurSetAddrSlave(int addr)</div><div class="ttdoc">Constructeur de la classe ErreurSetAddrSlave. </div><div class="ttdef"><b>Definition:</b> CI2C.h:144</div></div>
+<div class="ttc" id="classCI2C_1_1ErreurDevNotDefine_html"><div class="ttname"><a href="classCI2C_1_1ErreurDevNotDefine.html">CI2C::ErreurDevNotDefine</a></div><div class="ttdoc">exception device non défini </div><div class="ttdef"><b>Definition:</b> CI2C.h:161</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi 27 Mars 2015 12:15:26 pour CRTC par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

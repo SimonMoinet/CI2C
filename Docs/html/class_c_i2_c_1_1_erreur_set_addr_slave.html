@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="class_c_i2_c_1_1_erreur_set_addr_slave-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe CI2C::ErreurSetAddrSlave</div>  </div>
@@ -100,34 +101,31 @@ Graphe d'héritage de CI2C::ErreurSetAddrSlave:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur_set_addr_slave__inherit__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_set_addr_slave_inherit__map" alt="Inheritance graph"/></div>
 <map name="_c_i2_c_1_1_erreur_set_addr_slave_inherit__map" id="_c_i2_c_1_1_erreur_set_addr_slave_inherit__map">
-<area shape="rect" id="node2" href="class_c_i2_c_1_1_erreur.html" title="CI2C::Erreur" alt="" coords="45,80,141,107"/></map>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <div class="dynheader">
 Graphe de collaboration de CI2C::ErreurSetAddrSlave:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_c_i2_c_1_1_erreur_set_addr_slave__coll__graph.png" border="0" usemap="#_c_i2_c_1_1_erreur_set_addr_slave_coll__map" alt="Collaboration graph"/></div>
 <map name="_c_i2_c_1_1_erreur_set_addr_slave_coll__map" id="_c_i2_c_1_1_erreur_set_addr_slave_coll__map">
-<area shape="rect" id="node2" href="class_c_i2_c_1_1_erreur.html" title="CI2C::Erreur" alt="" coords="45,81,141,108"/></map>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ac92f34eb7c68e1b29ae55e0b147bdc02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html#ac92f34eb7c68e1b29ae55e0b147bdc02">ErreurSetAddrSlave</a> (int addr)</td></tr>
 <tr class="separator:ac92f34eb7c68e1b29ae55e0b147bdc02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07585943b0e10fe731b929e976779a65"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html#a07585943b0e10fe731b929e976779a65">what</a> () noexcept</td></tr>
-<tr class="separator:a07585943b0e10fe731b929e976779a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f82e7fa42f2ea5bb39d9c06517c5b09"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html#a6f82e7fa42f2ea5bb39d9c06517c5b09">what</a> () const noexcept</td></tr>
+<tr class="separator:a6f82e7fa42f2ea5bb39d9c06517c5b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Membres hérités additionnels</h2></td></tr>
-<tr class="inherit_header pub_attribs_class_c_i2_c_1_1_erreur"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_c_i2_c_1_1_erreur')"><img src="closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="class_c_i2_c_1_1_erreur.html">CI2C::Erreur</a></td></tr>
-<tr class="memitem:a72fc33a3697019d8261a3a00ac091f9f inherit pub_attribs_class_c_i2_c_1_1_erreur"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_c_i2_c_1_1_erreur.html">Erreur</a>(string const <br class="typebreak" />
-&amp;phrase=&quot;Erreur inconnu&quot;) <br class="typebreak" />
-const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur.html#a72fc33a3697019d8261a3a00ac091f9f">what</a> () noexcept</td></tr>
-<tr class="separator:a72fc33a3697019d8261a3a00ac091f9f inherit pub_attribs_class_c_i2_c_1_1_erreur"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:aebf96cc2020fd45215280d41648151d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i2_c_1_1_erreur_set_addr_slave.html#aebf96cc2020fd45215280d41648151d8">m_addr</a></td></tr>
+<tr class="separator:aebf96cc2020fd45215280d41648151d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock">
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00085">85</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00108">108</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 </div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ac92f34eb7c68e1b29ae55e0b147bdc02"></a>
 <div class="memitem">
@@ -151,12 +149,12 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00090">90</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00113">113</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a class="anchor" id="a07585943b0e10fe731b929e976779a65"></a>
+<a class="anchor" id="a6f82e7fa42f2ea5bb39d9c06517c5b09"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -167,7 +165,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
           <td class="memname">virtual const char* CI2C::ErreurSetAddrSlave::what </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -177,7 +175,30 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00091">91</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00114">114</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="aebf96cc2020fd45215280d41648151d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CI2C::ErreurSetAddrSlave::m_addr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="_c_i2_c_8h_source.html#l00110">110</a> du fichier <a class="el" href="_c_i2_c_8h_source.html">CI2C.h</a>.</p>
 
 </div>
 </div>
@@ -187,7 +208,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Mardi 17 Mars 2015 16:07:53 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Vendredi 27 Mars 2015 11:27:33 pour CI2C par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

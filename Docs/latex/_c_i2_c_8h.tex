@@ -11,7 +11,9 @@ Contient la declaration de la \hyperlink{class_c_i2_c}{C\+I2\+C}.
 {\ttfamily \#include $<$linux/i2c-\/dev.\+h$>$}\\*
 {\ttfamily \#include $<$exception$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
-Graphe des dépendances par inclusion de C\+I2\+C.\+h\+:\nopagebreak
+{\ttfamily \#include $<$sstream$>$}\\*
+Graphe des dépendances par inclusion de C\+I2\+C.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,12 +32,10 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 \item 
 class \hyperlink{class_c_i2_c}{C\+I2\+C}
 \begin{DoxyCompactList}\small\item\em Cette classe \hyperlink{class_c_i2_c}{C\+I2\+C} permet de lire/écrire les valeurs de registres des esclaves d'un bus I2\+C. \end{DoxyCompactList}\item 
-class \hyperlink{class_c_i2_c_1_1_erreur}{C\+I2\+C\+::\+Erreur}
-\item 
 class \hyperlink{class_c_i2_c_1_1_erreur_write}{C\+I2\+C\+::\+Erreur\+Write}
-\item 
+\begin{DoxyCompactList}\small\item\em Cette classe est une esception qui est levé lorsqu'il y a une erreur d'écriture. \end{DoxyCompactList}\item 
 class \hyperlink{class_c_i2_c_1_1_erreur_read}{C\+I2\+C\+::\+Erreur\+Read}
-\item 
+\begin{DoxyCompactList}\small\item\em Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture. \end{DoxyCompactList}\item 
 class \hyperlink{class_c_i2_c_1_1_erreur_open_dev}{C\+I2\+C\+::\+Erreur\+Open\+Dev}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_set_addr_slave}{C\+I2\+C\+::\+Erreur\+Set\+Addr\+Slave}
@@ -43,6 +43,11 @@ class \hyperlink{class_c_i2_c_1_1_erreur_set_addr_slave}{C\+I2\+C\+::\+Erreur\+S
 class \hyperlink{class_c_i2_c_1_1_erreur_dev_not_define}{C\+I2\+C\+::\+Erreur\+Dev\+Not\+Define}
 \item 
 class \hyperlink{class_c_i2_c_1_1_erreur_slave_not_define}{C\+I2\+C\+::\+Erreur\+Slave\+Not\+Define}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_c_i2_c_8h_ab15137f7c592d05573de99f078516157}{I2\+C\+\_\+\+S\+L\+A\+V\+E}~0x0703
 \end{DoxyCompactItemize}
 
 
@@ -52,4 +57,14 @@ Contient la declaration de la \hyperlink{class_c_i2_c}{C\+I2\+C}.
 
 
 Définition dans le fichier \hyperlink{_c_i2_c_8h_source}{C\+I2\+C.\+h}.
+
+
+
+\subsection{Documentation des macros}
+\hypertarget{_c_i2_c_8h_ab15137f7c592d05573de99f078516157}{\index{C\+I2\+C.\+h@{C\+I2\+C.\+h}!I2\+C\+\_\+\+S\+L\+A\+V\+E@{I2\+C\+\_\+\+S\+L\+A\+V\+E}}
+\index{I2\+C\+\_\+\+S\+L\+A\+V\+E@{I2\+C\+\_\+\+S\+L\+A\+V\+E}!C\+I2\+C.\+h@{C\+I2\+C.\+h}}
+\subsubsection[{I2\+C\+\_\+\+S\+L\+A\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define I2\+C\+\_\+\+S\+L\+A\+V\+E~0x0703}}\label{_c_i2_c_8h_ab15137f7c592d05573de99f078516157}
+
+
+Définition à la ligne 15 du fichier C\+I2\+C.\+h.
 
