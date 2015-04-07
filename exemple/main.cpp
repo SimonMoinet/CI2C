@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-#include "../../Classes/CI2C/CI2C.h"
+#include "../CI2C.h"
 
 using namespace std;
 

@@ -89,7 +89,7 @@ void CI2C::writeByte(__u8 reg, __u8 data)
 
 	isSetInterface();
 
-	error = i2c_smbus_write_byte_data(this->dev, reg, data);
+	error = i2c_smbus_write_byte_data(this->dev, data, reg);
 	if(error < 0)
 		throw ErreurWrite(static_cast<int>(reg), static_cast<int>(data));
 }
@@ -101,7 +101,7 @@ void CI2C::writeWord(__u8 reg, __u16 data)
 
 	isSetInterface();
 
-	error = i2c_smbus_write_word_data(this->dev, reg, data);
+	error = i2c_smbus_write_word_data(this->dev, data, reg);
 	if(error < 0)
 		throw ErreurWrite(static_cast<int>(reg), static_cast<int>(data));
 }

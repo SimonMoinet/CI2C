@@ -8,14 +8,10 @@ esclaves d'un bus I2C
 
 \file CI2C.h
 \brief Contient la declaration de la CI2C
-
-\class CI2C
-\brief Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C
 */
 
 #ifndef CI2C_H
 #define CI2C_H
-#define I2C_SLAVE 0x0703
 
 #include <fcntl.h> // O_RDWR
 #include <sys/ioctl.h>
@@ -26,21 +22,40 @@ esclaves d'un bus I2C
 
 using namespace std;
 
+/**
+ *\class CI2C
+ *\brief Cette classe CI2C permet de lire/écrire les valeurs de registres des esclaves d'un bus I2C
+ */
 class CI2C {
 	
 	public:
 
 		/**
 		 * \class ErreurWrite
-		 * \brief
+		 * \brief Cette classe est une esception qui est levé lorsqu'il y a une erreur d'écriture
 		 */
 		class ErreurWrite : public exception {
 			private:
+				/// Contient le registre dans lequel on a essayé d'écrire
 				int m_reg;
+				/// Contient la valeur qu'on a essayer d'écrire dans le registre
 				int m_data;
 
 			public:
+				/**
+				 * \brief Constructeur de la classe ErreurWrite
+				 *
+				 * Ce contructeur initialise les attributs de la classe ErreurWrite
+				 *
+				 * \param[in] reg : le registre dans lequel on essaye d'écrire
+				 * \param[in] data : la valeur que l'on essaye d'écrire dans le registre
+				 */
 				ErreurWrite(int reg, int data):m_reg(reg), m_data(data) {};
+
+				/**
+				 * \brief Methode what
+				 * \return la description de l'exception avec la valeur et le registre qui ont provoqué l'erreur
+				 */
 				virtual const char* what() const noexcept {
 					stringstream temp;
 					temp << "Erreur d'écriture de la valeur 0x" << hex << m_data << " dans le registre 0x" << m_reg;
@@ -50,13 +65,28 @@ class CI2C {
 
 		/**
 		 * \class ErreurRead
+		 * \brief Cette classe est une exception qui est levé lorsqu'il y a un erreur de lecture
 		 */
 		class ErreurRead : public exception {
 			private:
+				/// Contient le registre que l'on a essayé de lire
 				int m_reg;
 
 			public:
+				/**
+				 * \brief Constructeur de la classe ErreurRead
+				 *
+				 * Ce contructeur initialise les attributs de la classe ErreurWrite
+				 *
+				 * \param[in] reg : le registre que l'on a essayé de lire
+				 */
 				ErreurRead(int reg):m_reg(reg) {};
+
+				/**
+				 * \brief Methode what
+				 *
+				 * \return la description de l'esception avec la valeur du registre que l'on a essayé  de lire
+				 */
 				virtual const char* what() const noexcept {
 					stringstream temp;
 					temp << "Erreur de lecture du registre 0x" << hex << m_reg;
@@ -64,24 +94,58 @@ class CI2C {
 				};
 		};
 
+		/**
+		 * \class ErreurOpenDev
+		 * \brief exception lorsqu'on essaye d'ouvrir le dev spécifié
+		 */
 		class ErreurOpenDev : public exception {
 			private:
+				/// contient le nom du device que l'on essaye d'ouvrir
 				string m_devName;
 
 			public:
+				/**
+				 * \brief Contructeur de la classe ErreurOpenDev
+				 *
+				 * Ce contructeur initialise les attributs de la classe ErreurOpenDev
+				 * 
+				 * \param[in] devName : le nom du device que l'on a essayé d'ouvrir
+				 */
 				ErreurOpenDev(string devName):m_devName(devName) {};
+
+				/**
+				 * \brief Methode what
+				 * \return la description de l'exception avec le nom du device que l'on a essayé d'ouvrir
+				 */
 				virtual const char* what() const noexcept {
 					string temp = "Impossible d'ouvrir le bus i2c : " + m_devName;
 					return temp.c_str();
 				};
 		};
 
+		/**
+		 * \class ErreurSetAddrSlave
+		 * \brief exception definition de l'esclave
+		 */
 		class ErreurSetAddrSlave : public exception {
 			private:
+				/// Contient l'addresse de l'esclave avec lequel on veux communiquer
 				int m_addr;
 
 			public:
+				/**
+				 * \brief Constructeur de la classe ErreurSetAddrSlave
+				 *
+				 * Ce contructeur initialise les attributs de la classe ErreurSetAddrSlave
+				 *
+				 * \param[in] addr : l'adresse de l'esclave avec lequel on veux communiquer
+				 */
 				ErreurSetAddrSlave(int addr):m_addr(addr) {};
+
+				/**
+				 * \brief Methode what
+				 * \return la description de l'exception
+				 */
 				virtual const char* what() const noexcept {
 					stringstream temp;
 					temp << "Impossible de definir l'esclave avec lequel on veux communiquer. L'eclave est indisponible ou il n'y a pas d'esclave à l'adresse " << hex << m_addr;
@@ -89,15 +153,31 @@ class CI2C {
 				};
 		};
 
+		/**
+		 * \class ErreurDevNotDefine
+		 * \brief exception device non défini
+		 */
 		class ErreurDevNotDefine : public exception {
 			public:
+				/**
+				 * \brief Methode what
+				 * \return la description de l'exception
+				 */
 				virtual const char* what() const noexcept {
 					return "Erreur, le device I2C n'est pas défini";
 				};
 		};
 
+		/**
+		 * \class ErreurSlaveNotDefine
+		 * \brief exception adresse de l'esclave non défini
+		 */
 		class ErreurSlaveNotDefine : public exception {
 			public:
+				/**
+				 * \brief Methode what
+				 * \return la description de l'exception
+				 */
 				virtual const char* what() const noexcept {
 					return "Erreur, L'esclave n'est pas défini";
 				};

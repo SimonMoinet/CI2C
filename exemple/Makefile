@@ -6,7 +6,7 @@ CFLAGS= -std=c++11
 NAME_PROG= main
 
 # PERSO
-SOURCES= main.cpp ../../Classes/CI2C/CI2C.cpp
+SOURCES= main.cpp ../CI2C.cpp
 OBJETS= main.o CI2C.o
 FILES= $(OBJETS) $(NAME_PROG)
 # COMPILATION ARMEL
